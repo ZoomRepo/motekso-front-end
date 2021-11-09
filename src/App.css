@@ -1,15 +1,15 @@
 main {
   align-content: center;
-  box-sizing: border-box;
-  display: grid;
-  font-family: 'SF Pro Text', 'SF Pro Icons', 'Helvetica Neue', 'Helvetica',
-    'Arial', sans-serif;
+  /* box-sizing: border-box; */
+  /* display: grid; */
+  font-family: 'SF Pro Text', 'SF Pro Icons', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
+  -webkit-hyphens: auto;
   hyphens: auto;
-  line-height: 1.65;
+  /* line-height: 1.65; */
   margin: 0 auto;
-  max-width: 680px;
+  max-width: 100vw;
   min-height: 100vh;
-  padding: 72px 0;
+  /* padding: 72px0; */
   text-align: center;
 }
 h1 {
@@ -42,3 +42,24 @@ code:before,
 code:after {
   content: '\`';
 }
+
+.coming-soon {
+  background : #000;
+  color: #FB7E14;
+  width: 100%;
+  height: 100%;
+}
+
+.coming-soon,h1 {
+  color: #151515;
+  text-align: center;
+  /* top: 50%; */
+  font-size: 45px;
+}
+img {
+  top: -10%;
+  padding-bottom: -90px;
+  /* place-self: center; */
+  /* align-self: inherit; */
+  /* position: absolute; */
+  margin: auto;}
