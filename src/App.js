@@ -1,5 +1,6 @@
 import React from 'react';
 import { useEffect, useState } from 'react';
+import { TwitterTweetEmbed, TwitterTimelineEmbed } from 'react-twitter-embed'
 import './App.css';
 
 function App() {
@@ -13,18 +14,16 @@ function App() {
     getDate();
   }, []);
   return (
-    <main class="coming-soon">
-      <img src="Motekso - Transparent.png"/>
-      <h1 class="coming-soon">COMING SOON</h1>
-     
-        {/* <a href="/api/date">
-          <code>api/date</code> for the Date API with Go
-        </a>
-        .
-      </p>
-      <br />
-      <h2>The date according to Go is:</h2>
-      <p>{date ? date : 'Loading date...'}</p> */}
+    <main>
+      <div class="coming-soon">
+        <img src="Motekso - Transparent.png"/>
+        <h1 class="coming-soon">COMING SOON</h1>
+      </div>
+      <div class="twitter-feed">
+        <TwitterTimelineEmbed 
+            sourceType="profile"
+            screenName="MoteksoUK"/>
+      </div>
     </main>
  
   );
