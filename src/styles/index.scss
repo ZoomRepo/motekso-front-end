@@ -10,8 +10,8 @@ html, body {
     padding: 0px;margin: 0px;
 }
 
-@import "./blogpage.scss";
 @import "./sidebar.scss";
-@import "./header.scss";
-@import "./pages.scss";
+@import "./blog_header.scss";
+@import "./blog_page.scss";
+@import "./blog_post.scss";
 @import "./const.scss";
