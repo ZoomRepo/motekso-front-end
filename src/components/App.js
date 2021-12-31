@@ -1,7 +1,10 @@
 import React from 'react';
 import { useEffect, useState } from 'react';
 import { TwitterTweetEmbed, TwitterTimelineEmbed } from 'react-twitter-embed'
-import './App.css';
+import '../styles/index.scss'
+import Sidebar from './sidebar/Sidebar'
+import BlogPage from './blog/BlogPage'
+
 
 function App() {
   const [date, setDate] = useState(null);
@@ -15,15 +18,14 @@ function App() {
   }, []);
   return (
     <main>
-      <div class="coming-soon">
-        <img src="Motekso - Transparent.png"/>
-        <h1 class="coming-soon">COMING SOON</h1>
-      </div>
-      <div class="twitter-feed">
+      {/* TODO: automatically hide sidebar until hover over */}
+      {/* <Sidebar/> */}
+      <BlogPage/>
+      {/* <div class="twitter-feed">
         <TwitterTimelineEmbed 
             sourceType="profile"
             screenName="MoteksoUK"/>
-      </div>
+      </div> */}
     </main>
  
   );
