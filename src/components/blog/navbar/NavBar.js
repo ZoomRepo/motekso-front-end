@@ -26,8 +26,8 @@ class NavBar extends Component {
                         <li class="navBarLink">Home</li>
                         <li class="navBarLink">About</li>
                         <li class="navBarLink">Contact</li>
-                        <li class="navBarLink">Write</li>
-                        <li class="navBarLink">Logout</li>
+                        {/* <li class="navBarLink">Write</li> */}
+                        {/* <li class="navBarLink">Logout</li> */}
                     </ul>
                 </div>
                 <div class="topRight">

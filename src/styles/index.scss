@@ -1,16 +1,18 @@
 
 main {
     background: #dfdfdf;
-    height: 100vh;
     width: 100vw;
     margin: 0px;
     font-family: 'fira sans';
 }
 html, body {
-    padding: 0px;margin: 0px;
+    width: 100vw;
+    overflow-x: hidden;
+    padding: 0px;
+    margin: 0px;
 }
 
-@import "./sidebar.scss";
+@import "./blog/sidebar.scss";
 @import "./blog/header.scss";
 @import "./blog/page.scss";
 @import "./blog/post.scss";
