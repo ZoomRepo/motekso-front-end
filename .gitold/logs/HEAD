@@ -1,0 +1,11 @@
+0000000000000000000000000000000000000000 f2f4d08335df42cf56cea3cd70ed5673addcaa2d Oliver Beumkes <ollybeumkes@hotmail.co.uk> 1636415125 +0000	clone: from https://github.com/ZoomRepo/Motekso.git
+f2f4d08335df42cf56cea3cd70ed5673addcaa2d 2b21da19f2f85229e3e6a7be5e5d85bd9db712a6 Oliver Beumkes <ollybeumkes@hotmail.co.uk> 1636418948 +0000	commit: Initial Push with Coming Soon Page...
+2b21da19f2f85229e3e6a7be5e5d85bd9db712a6 5441b9ef26cda8cbac0e5d03de3c5d9983f1f617 Oliver Beumkes <ollybeumkes@hotmail.co.uk> 1636423124 +0000	commit: Added temp responsiveness to the Landing Page
+5441b9ef26cda8cbac0e5d03de3c5d9983f1f617 4b8a3350601834b64110282c8d69b587e6251a9e Oliver Beumkes <ollybeumkes@hotmail.co.uk> 1636579633 +0000	commit: implemented some grid styling and twitter feed
+4b8a3350601834b64110282c8d69b587e6251a9e 380dd209a56a0457218538d76ce89ea5fa9856df Oliver Beumkes <ollybeumkes@hotmail.co.uk> 1640966739 +0000	commit: Initial Motekso Frontend - Blog
+380dd209a56a0457218538d76ce89ea5fa9856df 3c092d33d38bc4d9cfa4b83802252ecde69954ec Oliver Beumkes <ollybeumkes@hotmail.co.uk> 1640972364 +0000	commit: Added Blog Backdrop/Header and Logo
+3c092d33d38bc4d9cfa4b83802252ecde69954ec 51be7e5b55f494e227a7821d15895bf08492ac5c Oliver Beumkes <ollybeumkes@hotmail.co.uk> 1640973623 +0000	commit: Changed Blog title wording
+51be7e5b55f494e227a7821d15895bf08492ac5c 191e294c499df5ddf71975e018c0cba1be8b5954 Oliver Beumkes <ollybeumkes@hotmail.co.uk> 1640975698 +0000	commit: Added social media links to buttons
+191e294c499df5ddf71975e018c0cba1be8b5954 a0a9006fe3c6f8cf138b1453795033431420730f Oliver Beumkes <ollybeumkes@hotmail.co.uk> 1641067561 +0000	commit: Added Sidebar to blog to display info about Who we are
+a0a9006fe3c6f8cf138b1453795033431420730f a0a9006fe3c6f8cf138b1453795033431420730f Oliver Beumkes <ollybeumkes@hotmail.co.uk> 1641078400 +0000	checkout: moving from main to post-page
+a0a9006fe3c6f8cf138b1453795033431420730f a0a9006fe3c6f8cf138b1453795033431420730f Oliver Beumkes <ollybeumkes@hotmail.co.uk> 1641078581 +0000	reset: moving to HEAD

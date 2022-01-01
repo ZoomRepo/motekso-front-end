@@ -6,7 +6,7 @@ export class Sidebar extends Component {
         return (
             <div class="social-sidebar">
                 <div class="section">
-                    <span class="title">WHO ARE WE?</span>
+                    <span class="title">WHO ARE WE</span>
                     <img src={whoAreWe} alt="who-are-we" />
                     <p>lorem ipsum dolor sit amet, consectetur adip, lorem ips dolor, lorem ipsum dolor, lorem ipsum dolor.</p>
                 </div>

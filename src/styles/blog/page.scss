@@ -61,3 +61,53 @@
     font-family: "Indie Flower";
     display: flex;
 }
+
+.post-page {
+    font-family: "Indie Flower";
+    display: flex;
+    background: #dfdfdf;
+    .post-content {
+        padding: 20px;
+        flex: 9;
+        .post-content-wrapper {
+            .post-image {
+                width:100%;
+                height:400px;
+                object-fit: cover;
+                border-radius: 5px;
+            }
+            .post-title {
+                text-align: center;
+                margin: 10px;
+                font-size: 28px;
+            }
+            .post-edit {
+                float: right;
+                font-style: 16px;
+                .post-icon {
+                    margin-left: 10px;
+                    cursor: pointer;
+                    color: tomato;
+                    &:first-child {
+                        color: teal;
+                    }
+                }
+            }
+            .post-info {
+                margin-bottom: 20px;
+                display: flex;
+                justify-content: space-between;
+                font-style: 16px;
+                color: #fb7e14;
+            }
+            .post-description {
+                color: #373330;
+                line-height: 25px;
+                font-size: 18px;
+            }
+        }
+    }
+    .social-sidebar {
+        flex:3;
+    }
+}

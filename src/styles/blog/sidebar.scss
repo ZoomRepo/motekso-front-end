@@ -1,4 +1,5 @@
 .social-sidebar {
+    // TODO: Fix Respivness on Sidebar List items for big screens, list seems uncentered...
     flex: 3;
     margin-top: 20px;
     padding-bottom: 30px;
@@ -38,6 +39,7 @@
         list-style: none;
         margin-bottom: 30px;
         color: #fb7e14;
+        text-align: center;
         .list-item {
             display: inline-block;
             width: 50%;
