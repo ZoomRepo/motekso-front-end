@@ -5,6 +5,7 @@ import Write from './pages/write/Write'
 import Home from './pages/home/Home'
 import Settings from './pages/settings/Settings'
 import Login from './pages/login/Login'
+import Registration from './pages/registration/Registration'
 
 class BlogPage extends Component {
     componentWillMount() {
@@ -18,7 +19,7 @@ class BlogPage extends Component {
         return (
             <div class="blog">
                 <NavBar/>
-                <Login/>
+                <Registration/>
             </div>
         );
     }

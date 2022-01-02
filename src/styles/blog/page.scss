@@ -310,4 +310,49 @@
             border-radius: 10px;
         }
     }
+
+    .registration {
+        height: calc(100vh - 50px);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background: linear-gradient(rgba(255,255,255, 0.4),rgba(0,0,0, 0.6)), url("https://c.pxhere.com/images/7d/21/ed588c6f9dd84ff1cf8f96100885-1450843.jpg!d");
+        background-size: cover;
+        .title {
+            font-size: 50px;
+        }
+        .form {
+            font-weight: 600;
+            margin-top: 20px;
+            display: flex;
+            width: 25%;
+            flex-direction: column;
+            label {
+                margin: 10px 0;
+            }
+            .login-input {
+                font-family: "Indie Flower";
+                font-size: 18px;
+                padding: 10px;
+                background-color: #fff;
+                border: none;
+                border-radius: 10px;
+                &:focus {
+                    outline-style: none;
+                }
+            }
+            .register-button {
+                font-family: "Indie Flower";
+                font-size: 20px !important;
+                margin-top: 20px;
+                cursor: pointer;
+                color:#fff;
+                background-color: #fb7e14;
+                padding: 10px;
+                border:none;
+                border-radius: 10px;
+            }   
+        }
+    }
 }
