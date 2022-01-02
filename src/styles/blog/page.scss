@@ -4,8 +4,9 @@
     min-height: 100vh;
     font-family: "Indie Flower";
     // TODO: Explore if we should keep the Indie Flower throughout the website or limit it to Hand Written content and keep the rest of the site Fira Sans.
-    // padding-left: 20vw;
+    
     .navbar {
+        font-family: "Fira Sans";
         width: 100vw;
         background: #151515;
         height: 50px;
@@ -58,6 +59,7 @@
             cursor: pointer;
         }
     }
+    
     .post-page {
         display: flex;
         background: #dfdfdf;
@@ -106,70 +108,71 @@
             flex:3;
         }
     }
+
     .home {
-        font-family: "Indie Flower";
-        display: flex;
-    }
-    .write {
-        padding-top: 50px;
-        .story-image {
-            margin-left: 150px;
-            width: 70vw;
-            height: 250px;
-            border-radius: 10px;
-            object-fit: cover;
-        }
-        .form {
-            .form-collection {
+            display: flex;
+        .write {
+            padding-top: 50px;
+            .story-image {
                 margin-left: 150px;
-                position: relative;
-                display: flex;
-                .upload-icon {
-                    width: 25px;
-                    height: 25px;
-                    margin-top: 20px;
-                    border-radius: 50%;
-                    border: 1px solid;
+                width: 70vw;
+                height: 250px;
+                border-radius: 10px;
+                object-fit: cover;
+            }
+            .form {
+                .form-collection {
+                    margin-left: 150px;
+                    position: relative;
                     display: flex;
-                    align-items: center;
-                    justify-content: center;
-                    color: #151515;
-                    cursor: pointer;
-                }
-                .title-text {
-                    font-size: 20px;
-                }
-                .story-text{
-                    font-size: 18px !important;
-                }
-                .title-text, .story-text {
-                    border: none;
-                    font-size: 30px;
-                    padding: 20px;
-                    width: 70vw;
-                    font-family: 'Indie Flower';
-                    color: #151515;
-                    background: #dfdfdf;
-                    &:focus {
-                        outline: none;
+                    .upload-icon {
+                        width: 25px;
+                        height: 25px;
+                        margin-top: 20px;
+                        border-radius: 50%;
+                        border: 1px solid;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        color: #151515;
+                        cursor: pointer;
                     }
-                }
-                .submit {
-                    font-family: 'fira sans';
-                    position: absolute;
-                    top: 20px;
-                    right: 50px;
-                    color: white;
-                    background-color: teal;
-                    padding: 10px;
-                    border: none;
-                    border-radius: 10px;
-                    font-size: 16px;
-                    cursor: pointer;
+                    .title-text {
+                        font-size: 20px;
+                    }
+                    .story-text{
+                        font-size: 18px !important;
+                    }
+                    .title-text, .story-text {
+                        border: none;
+                        font-size: 30px;
+                        padding: 20px;
+                        width: 70vw;
+                        font-family: 'Indie Flower';
+                        color: #151515;
+                        background: #dfdfdf;
+                        &:focus {
+                            outline: none;
+                        }
+                    }
+                    .submit {
+                        font-family: 'fira sans';
+                        position: absolute;
+                        top: 20px;
+                        right: 50px;
+                        color: white;
+                        background-color: teal;
+                        padding: 10px;
+                        border: none;
+                        border-radius: 10px;
+                        font-size: 16px;
+                        cursor: pointer;
+                    }
                 }
             }
         }
     }
+
     .settings {
         display: flex;
         .user-wrapper {
@@ -247,6 +250,64 @@
                 border-bottom: 1px solid lightgray;
                 cursor: pointer;
               }
+        }
+    }
+
+    .login {
+        height: calc(100vh - 50px);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background: linear-gradient(rgba(255,255,255, 0.4),rgba(0,0,0, 0.6)), url("https://c.pxhere.com/images/7d/21/ed588c6f9dd84ff1cf8f96100885-1450843.jpg!d");
+        background-size: cover;
+        .title {
+            font-size: 50px;
+        }
+        .form {
+            font-weight: 600;
+            margin-top: 20px;
+            display: flex;
+            width: 25%;
+            flex-direction: column;
+            label {
+                margin: 10px 0;
+            }
+            .login-input {
+                font-family: "Indie Flower";
+                font-size: 18px;
+                padding: 10px;
+                background-color: #fff;
+                border: none;
+                border-radius: 10px;
+                &:focus {
+                    outline-style: none;
+                }
+            }
+            .login-button {
+                font-family: "Indie Flower";
+                font-size: 20px !important;
+                margin-top: 20px;
+                cursor: pointer;
+                color:#fff;
+                background-color: #fb7e14;
+                padding: 10px;
+                border:none;
+                border-radius: 10px;
+            }   
+        }
+        .register-button {
+            font-family: "Indie Flower";
+            font-size: 18px;
+            position: absolute;
+            background-color: teal;
+            color: #fff;
+            padding: 10px;
+            top: 60px;
+            right: 20px;
+            cursor: pointer;
+            border:none;
+            border-radius: 10px;
         }
     }
 }
