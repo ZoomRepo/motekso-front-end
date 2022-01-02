@@ -6,6 +6,8 @@ export class Registration extends Component {
             <div class="registration">
                 <span class="title">Registration</span>
                 <form class="form">
+                    <label>Username</label>
+                    <input class="login-input" type="text" placeholder="Enter your email..."/>
                     <label>Email</label>
                     <input class="login-input" type="text" placeholder="Enter your email..."/>
                     <label>Password</label>

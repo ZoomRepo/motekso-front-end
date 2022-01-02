@@ -4,7 +4,67 @@
     min-height: 100vh;
     font-family: "Indie Flower";
     // TODO: Explore if we should keep the Indie Flower throughout the website or limit it to Hand Written content and keep the rest of the site Fira Sans.
-    
+   
+    .write {
+        padding-top: 50px;
+        .story-image {
+            margin-left: 150px;
+            width: 70vw;
+            height: 250px;
+            border-radius: 10px;
+            object-fit: cover;
+        }
+        .form {
+            .form-collection {
+                margin-left: 150px;
+                position: relative;
+                display: flex;
+                .upload-icon {
+                    width: 25px;
+                    height: 25px;
+                    margin-top: 20px;
+                    border-radius: 50%;
+                    border: 1px solid;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    color: #151515;
+                    cursor: pointer;
+                }
+                .title-text {
+                    font-size: 20px;
+                }
+                .story-text{
+                    font-size: 18px !important;
+                }
+                .title-text, .story-text {
+                    border: none;
+                    font-size: 30px;
+                    padding: 20px;
+                    width: 70vw;
+                    font-family: 'Indie Flower';
+                    color: #151515;
+                    background: #dfdfdf;
+                    &:focus {
+                        outline: none;
+                    }
+                }
+                .submit {
+                    font-family: 'fira sans';
+                    position: absolute;
+                    top: 20px;
+                    right: 50px;
+                    color: white;
+                    background-color: teal;
+                    padding: 10px;
+                    border: none;
+                    border-radius: 10px;
+                    font-size: 16px;
+                    cursor: pointer;
+                }
+            }
+        }
+    }
     .navbar {
         font-family: "Fira Sans";
         width: 100vw;
@@ -19,6 +79,22 @@
             display: flex;
             align-items: center;
             justify-content: center;
+            .navBarLinks {
+                display: flex;
+                justify-content: center;
+                margin: 0;
+                padding: 0;
+                list-style: none;
+                .navBarLink {
+                    text-transform: uppercase;
+                    color: #fb7e14;
+                    margin: 20px;
+                    margin-top: 15px;
+                    font-size: 18px;
+                    font-weight: 300;
+                    cursor: pointer;
+                }
+            }
         }
         .topIcon {
             font-size: 20px;
@@ -110,67 +186,7 @@
     }
 
     .home {
-            display: flex;
-        .write {
-            padding-top: 50px;
-            .story-image {
-                margin-left: 150px;
-                width: 70vw;
-                height: 250px;
-                border-radius: 10px;
-                object-fit: cover;
-            }
-            .form {
-                .form-collection {
-                    margin-left: 150px;
-                    position: relative;
-                    display: flex;
-                    .upload-icon {
-                        width: 25px;
-                        height: 25px;
-                        margin-top: 20px;
-                        border-radius: 50%;
-                        border: 1px solid;
-                        display: flex;
-                        align-items: center;
-                        justify-content: center;
-                        color: #151515;
-                        cursor: pointer;
-                    }
-                    .title-text {
-                        font-size: 20px;
-                    }
-                    .story-text{
-                        font-size: 18px !important;
-                    }
-                    .title-text, .story-text {
-                        border: none;
-                        font-size: 30px;
-                        padding: 20px;
-                        width: 70vw;
-                        font-family: 'Indie Flower';
-                        color: #151515;
-                        background: #dfdfdf;
-                        &:focus {
-                            outline: none;
-                        }
-                    }
-                    .submit {
-                        font-family: 'fira sans';
-                        position: absolute;
-                        top: 20px;
-                        right: 50px;
-                        color: white;
-                        background-color: teal;
-                        padding: 10px;
-                        border: none;
-                        border-radius: 10px;
-                        font-size: 16px;
-                        cursor: pointer;
-                    }
-                }
-            }
-        }
+        display: flex;
     }
 
     .settings {
