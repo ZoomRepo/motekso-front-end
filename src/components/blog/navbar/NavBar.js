@@ -21,10 +21,10 @@ class NavBar extends Component {
                 <div class="topCenter">
                     <ul class="navBarLinks">
                         <li class="navBarLink"><Link class="link" to="/">Home</Link></li>
-                        <li class="navBarLink"><Link class="link" to="/">About</Link></li>
-                        <li class="navBarLink"><Link class="link" to="/">Contact</Link></li>
+                        {/* <li class="navBarLink"><Link class="link" to="/">About</Link></li>
+                        <li class="navBarLink"><Link class="link" to="/">Contact</Link></li> */}
                         <li class="navBarLink">{user && <Link class="link" to="/write">Write</Link>}</li>
-                        <li class="navBarLink">{user && <Link class="link" to="/">Logout</Link>}</li>
+                        <li class="navBarLink">{user && <Link class="link" to="/logout">Logout</Link>}</li>
                     </ul>
                 </div>
                 <div class="topRight">

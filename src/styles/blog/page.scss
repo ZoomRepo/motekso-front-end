@@ -2,9 +2,7 @@
     width: 100vw;
     font-size: 22px;
     min-height: 100vh;
-    font-family: "Indie Flower";
-    // TODO: Explore if we should keep the Indie Flower throughout the website or limit it to Hand Written content and keep the rest of the site Fira Sans.
-   
+    font-family: "Indie Flower";   
     .write {
         padding-top: 50px;
         .story-image {
@@ -32,10 +30,10 @@
                     cursor: pointer;
                 }
                 .title-text {
-                    font-size: 20px;
+                    font-size: 28px;
                 }
                 .story-text{
-                    font-size: 18px !important;
+                    font-size: 22px !important;
                 }
                 .title-text, .story-text {
                     border: none;
@@ -166,17 +164,19 @@
                         }
                     }
                 }
+                // TODO: Check Alignment of Title for Story
                 .post-info {
+                    font-family: "Fira Sans";
                     margin-bottom: 20px;
                     display: flex;
                     justify-content: space-between;
-                    font-style: 16px;
+                    font-size: 16px;
                     color: #fb7e14;
                 }
                 .post-description {
                     color: #373330;
                     line-height: 25px;
-                    font-size: 18px;
+                    font-size: 22px;
                 }
             }
         }
@@ -190,6 +190,7 @@
     }
 
     .settings {
+        font-family: "Fira Sans";
         display: flex;
         .user-wrapper {
             flex: 9;
@@ -217,7 +218,6 @@
                     margin-top: 20px;
                 }
                 input {
-                    font-family: "Indie Flower";
                     color: #151515;
                     background: #dfdfdf;
                     margin-top: 10px;
@@ -255,14 +255,14 @@
                 cursor: pointer;
             }
             .submit {
-                font-family: "Indie Flower";
                 font-size: 18px;
                 background: #fb7e14;
                 margin-top: 10px;
                 margin-bottom: 10px;
                 height: 30px;
+                color: #ffff;
                 border: none;
-                border-radius: 20px;
+                border-radius: 10px;
                 border-bottom: 1px solid lightgray;
                 cursor: pointer;
               }
@@ -277,6 +277,7 @@
         align-items: center;
         background: linear-gradient(rgba(255,255,255, 0.4),rgba(0,0,0, 0.6)), url("https://c.pxhere.com/images/7d/21/ed588c6f9dd84ff1cf8f96100885-1450843.jpg!d");
         background-size: cover;
+        font-family: "Fira Sans";
         .title {
             font-size: 50px;
         }
@@ -290,7 +291,6 @@
                 margin: 10px 0;
             }
             .login-input {
-                font-family: "Indie Flower";
                 font-size: 18px;
                 padding: 10px;
                 background-color: #fff;
@@ -301,7 +301,6 @@
                 }
             }
             .login-button {
-                font-family: "Indie Flower";
                 font-size: 20px !important;
                 margin-top: 20px;
                 cursor: pointer;
@@ -313,7 +312,6 @@
             }   
         }
         .register-button {
-            font-family: "Indie Flower";
             font-size: 18px;
             position: absolute;
             background-color: teal;
@@ -337,8 +335,10 @@
         background-size: cover;
         .title {
             font-size: 50px;
+            font-family: "Fira Sans";
         }
         .form {
+            font-family: "Fira Sans";
             font-weight: 600;
             margin-top: 20px;
             display: flex;
@@ -348,7 +348,6 @@
                 margin: 10px 0;
             }
             .login-input {
-                font-family: "Indie Flower";
                 font-size: 18px;
                 padding: 10px;
                 background-color: #fff;
@@ -359,7 +358,6 @@
                 }
             }
             .register-button {
-                font-family: "Indie Flower";
                 font-size: 20px !important;
                 margin-top: 20px;
                 cursor: pointer;

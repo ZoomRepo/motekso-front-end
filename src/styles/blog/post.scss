@@ -18,6 +18,8 @@
             align-items: center;
         }
         .post-category {
+            font-family: "Fira Sans";
+            font-size: 16px;
             color: #fb7e14;
             margin-top: 15px;
             margin-right:10px;
@@ -30,12 +32,13 @@
             cursor: pointer;
         }
         .post-date {
+            font-family: "Fira Sans";
             font-style: italic;
             font-size: 13px;
             margin-top: 15px;
         }
         .post-description {
-            font-size: 14px;
+            font-size: 16px;
             line-height:24px;
             margin-top: 15px;
             overflow: hidden;

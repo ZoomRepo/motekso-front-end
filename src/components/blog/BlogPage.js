@@ -9,13 +9,6 @@ import Registration from './pages/registration/Registration'
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 class BlogPage extends Component {
-    componentWillMount() {
-
-    }
-
-    componentDidMount() {
-
-    }
     render() {
         const user = false;
 
@@ -37,6 +30,7 @@ class BlogPage extends Component {
                             { user ? <Home/> : <Registration/> }
                         </Route>
                         <Route path="/settings">
+                            {console.log({user}) }
                             { user ? <Settings/> : <Registration/> }
                         </Route>
                         <Route path="/write">
