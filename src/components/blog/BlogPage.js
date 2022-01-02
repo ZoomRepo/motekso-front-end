@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import NavBar from './navbar/NavBar'
-import PostPage from './pages/post-page/PostPage'
+import Story from './pages/story/Story'
 import Write from './pages/write/Write'
 import Home from './pages/home/Home'
 import Settings from './pages/settings/Settings'

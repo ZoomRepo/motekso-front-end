@@ -172,54 +172,81 @@
     }
     .settings {
         display: flex;
-        .user {
+        .user-wrapper {
             flex: 9;
             padding: 20px;
-            align-items: center;
-
-            justify-content: space-between;
-            .personal-details {
+            .user-header {
+                display: flex;
                 align-items: center;
                 justify-content: space-between;
                 .update-text {
                     font-size: 30px;
-                    color: #fb7e14;
                     margin-bottom: 20px;
                 }
                 .delete-text {
-                    color: red;
+                    color: #fb7e14;
                     font-size: 12px;
+                    font-weight: 600;
                     cursor: pointer;
-                    font-family: 'fira sans';
-
-                }
-            
-                .form {
-                    display: flex;
-                    flex-direction: column;
-                }
-                .profile-picture {
-                    display:flex;
-                    align-items: center;
-                    margin-top: 10px;
-                    img {
-                        width: 70px;
-                        height: 70px;
-                        border-radius: 20px;
-                        object-fit: cover;
-                    }
-                }
-                .profile-icon {
-                    width: 25px;
-                    height: 25px;
-                    border-radius: 50%;
-                    background-color: #dfdfdf;
-                    color: #373330;
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
                 }
             }
-    }
+            .form {
+                display: flex;
+                flex-direction: column;
+                label {
+                    font-size: 20px;
+                    margin-top: 20px;
+                }
+                input {
+                    font-family: "Indie Flower";
+                    color: #151515;
+                    background: #dfdfdf;
+                    margin-top: 10px;
+                    margin-bottom: 10px;
+                    height: 30px;
+                    border: none;
+                    border-bottom: 1px solid lightgray;
+                    &:focus {
+                        outline-style: none;
+                    }
+                  }
+            }
+            .profile-picture {
+                display:flex;
+                align-items: center;
+                margin-top: 10px;
+                margin-bottom: 10px;
+                cursor: pointer;
+                img {
+                    width: 70px;
+                    height: 70px;
+                    border-radius: 20px;
+                    object-fit: cover;
+                }
+            }
+            .profile-icon {
+                width: 25px;
+                height: 25px;
+                border-radius: 50%;
+                background-color: #dfdfdf;
+                color: #373330;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                cursor: pointer;
+            }
+            .submit {
+                font-family: "Indie Flower";
+                font-size: 18px;
+                background: #fb7e14;
+                margin-top: 10px;
+                margin-bottom: 10px;
+                height: 30px;
+                border: none;
+                border-radius: 20px;
+                border-bottom: 1px solid lightgray;
+                cursor: pointer;
+              }
+        }
     }
 }
