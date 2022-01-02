@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import NavBar from './navbar/NavBar'
 import PostPage from './pages/post-page/PostPage'
+import Write from './pages/write/Write'
 import Home from './pages/home/Home'
 
 class BlogPage extends Component {
@@ -13,9 +14,9 @@ class BlogPage extends Component {
     }
     render() {
         return (
-            <div class="blogpage">
+            <div class="blog">
                 <NavBar/>
-                <PostPage/>
+                <Write/>
             </div>
         );
     }
