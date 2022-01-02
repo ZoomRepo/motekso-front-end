@@ -1,13 +1,10 @@
 import React, { Component } from 'react';
+import { Link } from "react-router-dom"
+
 class NavBar extends Component {
-    componentWillMount() {
-
-    }
-    componentDidMount() {
-
-    }
-
     render() {
+        const user = false;
+
         return (
             <div class="navbar">
                 <div class="topLeft">
@@ -23,16 +20,22 @@ class NavBar extends Component {
                 </div>
                 <div class="topCenter">
                     <ul class="navBarLinks">
-                        {/* <li class="navBarLink">Home</li> */}
-                        {/* Hidden Post Page complete */}
-                        <li class="navBarLink">About</li>
-                        <li class="navBarLink">Contact</li>
-                        <li class="navBarLink">Write</li>
-                        <li class="navBarLink">Logout</li>
+                        <li class="navBarLink"><Link class="link" to="/">Home</Link></li>
+                        {/* <li class="navBarLink"><Link class="link" to="/">About</Link></li>
+                        <li class="navBarLink"><Link class="link" to="/">Contact</Link></li> */}
+                        <li class="navBarLink">{user && <Link class="link" to="/write">Write</Link>}</li>
+                        <li class="navBarLink">{user && <Link class="link" to="/logout">Logout</Link>}</li>
                     </ul>
                 </div>
                 <div class="topRight">
-                    <img class="topImage" src="https://bestcellphonespyapps.com/wp-content/uploads/2017/09/pexels-photo-220453-1-768x786.jpeg"/>
+                    {user ?
+                   (<img class="topImage" src="https://bestcellphonespyapps.com/wp-content/uploads/2017/09/pexels-photo-220453-1-768x786.jpeg"/>
+                    ):
+                    (<ul class="navBarLinks">
+                         <li class="navBarLink"><Link class="link" to="/login">Login</Link></li>
+                         <li class="navBarLink"><Link class="link" to="/registration">Register</Link></li>
+                    </ul>)
+                }
                     <i class="topSearchIcon fas fa-search"></i>
                 </div>
             </div>
