@@ -2,6 +2,8 @@
     width: 100vw;
     font-size: 22px;
     min-height: 100vh;
+    font-family: "Indie Flower";
+    // TODO: Explore if we should keep the Indie Flower throughout the website or limit it to Hand Written content and keep the rest of the site Fira Sans.
     // padding-left: 20vw;
     .navbar {
         width: 100vw;
@@ -57,7 +59,6 @@
         }
     }
     .post-page {
-        font-family: "Indie Flower";
         display: flex;
         background: #dfdfdf;
         .post-content {
@@ -170,6 +171,55 @@
         }
     }
     .settings {
-        
+        display: flex;
+        .user {
+            flex: 9;
+            padding: 20px;
+            align-items: center;
+
+            justify-content: space-between;
+            .personal-details {
+                align-items: center;
+                justify-content: space-between;
+                .update-text {
+                    font-size: 30px;
+                    color: #fb7e14;
+                    margin-bottom: 20px;
+                }
+                .delete-text {
+                    color: red;
+                    font-size: 12px;
+                    cursor: pointer;
+                    font-family: 'fira sans';
+
+                }
+            
+                .form {
+                    display: flex;
+                    flex-direction: column;
+                }
+                .profile-picture {
+                    display:flex;
+                    align-items: center;
+                    margin-top: 10px;
+                    img {
+                        width: 70px;
+                        height: 70px;
+                        border-radius: 20px;
+                        object-fit: cover;
+                    }
+                }
+                .profile-icon {
+                    width: 25px;
+                    height: 25px;
+                    border-radius: 50%;
+                    background-color: #dfdfdf;
+                    color: #373330;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                }
+            }
+    }
     }
 }

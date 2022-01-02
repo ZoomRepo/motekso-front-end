@@ -27,7 +27,7 @@ class NavBar extends Component {
                         {/* Hidden Post Page complete */}
                         <li class="navBarLink">About</li>
                         <li class="navBarLink">Contact</li>
-                        <li class="navBarLink">Write</li>
+                        {/* <li class="navBarLink">Write</li> */}
                         <li class="navBarLink">Logout</li>
                     </ul>
                 </div>
