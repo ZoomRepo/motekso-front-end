@@ -21,7 +21,9 @@ const axiosInstance = () => {
     },
     cancelToken: callCancel.token
   });
-
+  axiosInstance.defaults.baseURL = 'http://api.motekso.co.uk';
+  axiosInstance.defaults.headers.post['Content-Type'] ='application/json;charset=utf-8';
+  axiosInstance.defaults.headers.post['Access-Control-Allow-Origin'] = '*';
   axiosInstance.interceptors.response.use(handleSuccess, handleError);
   return axiosInstance;
 };
