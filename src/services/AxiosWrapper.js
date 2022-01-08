@@ -15,10 +15,9 @@ const axiosInstance = () => {
   // TODO: Fix CORS Issue
   const axiosInstance = Axios.create({
     headers: {
-    'Access-Control-Allow-Origin': '*',
-    'Content-Type': 'application/json',
-    Authorization: localStorage.getItem("token"),
-    'baseURL' : 'http://api.motekso.co.uk'
+    // 'Access-Control-Allow-Origin': '*',
+    // 'Content-Type': 'application/json',
+    // Authorization: localStorage.getItem("token"),
     },
     cancelToken: callCancel.token
   });

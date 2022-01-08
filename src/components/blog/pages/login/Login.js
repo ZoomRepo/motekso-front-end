@@ -12,13 +12,12 @@ export class Login extends Component {
         signIn(this.state.username, this.state.password).then(res => {
             if (res !== null && res !== undefined) {
                 localStorage.setItem("token", res);
-                console.log(res)
                 this.props.AuthenticateApplication();
             }
+            console.log(res)
         }, (error) => {
             console.log(error);
           })
-
     }
 
     changeEvent = e => {
@@ -37,15 +36,15 @@ export class Login extends Component {
         return (
             <div class="login">
                 <span class="title">Login</span>
-                <form class="form">
+                <div class="form">
                     <label>Email</label>
                     <input class="login-input" name="username" type="text" placeholder="Enter your username..." value={this.state.username}
           onChange={e => { this.changeEvent(e); }} required />
                     <label>Password</label>
                     <input class="login-input" name="password" type="password" placeholder="Enter your password..." value={this.state.password}
           onChange={e => { this.changeEvent(e); }} required />
-                    <button class="login-button" onClick={() => this.login()}>Login</button>
-                </form>
+                    <button class="login-button" id="submit" onClick={() => this.login()} >Login</button>
+                </div>
                 <button class="register-button"><Link class="link" to="/registration">Register</Link></button>
             </div>
         )

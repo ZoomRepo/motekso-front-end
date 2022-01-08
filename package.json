@@ -4,6 +4,7 @@
   "private": true,
   "dependencies": {
     "axios": "^0.24.0",
+    "http-proxy-middleware": "^2.0.1",
     "react": "^16.6.1",
     "react-dom": "^16.6.1",
     "react-router-dom": "^5.2.0",
@@ -24,5 +25,5 @@
     "not ie <= 11",
     "not op_mini all"
   ],
-   "proxy":"https://api.motekso.co.uk"
+  "proxy": "http://api.motekso.co.uk"
 }
