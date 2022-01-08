@@ -2,7 +2,7 @@ import { AxiosPost, AxiosGet, AxiosDelete } from "../AxiosWrapper";
 
 export const upsertUser = (username, password, email) => {
     // Assign Dynamic value to change on enviornment change and for different services if needed
-  return AxiosPost(`http://api.motekso.co.uk/user`, {
+  return AxiosPost(`https://cors-anywhere.herokuapp.com/http://api.motekso.co.uk/user`, {
     username: username,
     password: password,
     email: email
@@ -11,19 +11,19 @@ export const upsertUser = (username, password, email) => {
 
 export const getUser = (username) => {
   // Assign Dynamic value to change on enviornment change and for different services if needed
-  return AxiosGet(`http://api.motekso.co.uk/users`,{
+  return AxiosGet(`https://cors-anywhere.herokuapp.com/http://api.motekso.co.uk/users`,{
     username: username
   });
 };
 
 export const getUsers = () => {
   // Assign Dynamic value to change on enviornment change and for different services if needed
-  return AxiosGet(`http://api.motekso.co.uk/users`);
+  return AxiosGet(`https://cors-anywhere.herokuapp.com/http://api.motekso.co.uk/users`);
 };
 
 export const deleteUser = (username) => {
   // Assign Dynamic value to change on enviornment change and for different services if needed
-  return AxiosDelete(`http://api.motekso.co.uk/user`,{
+  return AxiosDelete(`https://cors-anywhere.herokuapp.com/http://api.motekso.co.uk/user`,{
     username: username
   });
 };

@@ -12,6 +12,7 @@ const handleError = error => {
 };
 
 const axiosInstance = () => {
+  // TODO: Fix CORS Issue
   const axiosInstance = Axios.create({
     headers: {
     'Access-Control-Allow-Origin': '*',
