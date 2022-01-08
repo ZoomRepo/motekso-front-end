@@ -14,6 +14,7 @@ const handleError = error => {
 const axiosInstance = () => {
   const axiosInstance = Axios.create({
     headers: {
+    'Access-Control-Allow-Origin': '*',
     'Content-Type': 'application/json',
     Authorization: localStorage.getItem("token")
     },
