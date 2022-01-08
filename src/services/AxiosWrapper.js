@@ -17,13 +17,11 @@ const axiosInstance = () => {
     headers: {
     'Access-Control-Allow-Origin': '*',
     'Content-Type': 'application/json',
-    Authorization: localStorage.getItem("token")
+    Authorization: localStorage.getItem("token"),
+    'baseURL' : 'http://api.motekso.co.uk'
     },
     cancelToken: callCancel.token
   });
-  axiosInstance.defaults.baseURL = 'http://api.motekso.co.uk';
-  axiosInstance.defaults.headers.post['Content-Type'] ='application/json;charset=utf-8';
-  axiosInstance.defaults.headers.post['Access-Control-Allow-Origin'] = '*';
   axiosInstance.interceptors.response.use(handleSuccess, handleError);
   return axiosInstance;
 };

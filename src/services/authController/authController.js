@@ -1,7 +1,6 @@
 import { AxiosPost } from "../AxiosWrapper";
 
 export const signIn = (username, password) => {
-    // Assign Dynamic value to change on enviornment change and for different services if needed
   return AxiosPost(`http://api.motekso.co.uk/token`, {
     username: username,
     password: password

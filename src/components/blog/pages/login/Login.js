@@ -15,7 +15,10 @@ export class Login extends Component {
                 console.log(res)
                 this.props.AuthenticateApplication();
             }
-        })
+        }, (error) => {
+            console.log(error);
+          })
+
     }
 
     changeEvent = e => {
