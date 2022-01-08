@@ -9,9 +9,26 @@ import Registration from './pages/registration/Registration'
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 class BlogPage extends Component {
+    state = {
+        loggedIn: false
+    }
+    
+  authenticateApplication() {
+    if(localStorage.getItem("token") !== null) {
+          this.setState({ loggedIn: true });
+      } else  {
+      this.setState({ loggedIn: false });
+    }
+  }
+  
+  componentWillMount() {
+    if(localStorage.getItem('token')) {
+      this.setState({ loggedIn: true });
+    } else  {
+      this.setState({ loggedIn: false });
+    }
+  }
     render() {
-        const user = false;
-
         return (
             <div class="blog">
                 <Router>
@@ -24,17 +41,17 @@ class BlogPage extends Component {
                             <Home/>
                         </Route>
                         <Route path="/login">
-                        { user ? <Home/> : <Login/> }
+                        { this.state.loggedIn ? <Home/> : <Login AuthenticateApplication={() => this.authenticateApplication()}/> }
                         </Route>
                         <Route path="/registration">
-                            { user ? <Home/> : <Registration/> }
+                            { this.state.loggedIn ? <Home/> : <Registration/> }
                         </Route>
                         <Route path="/settings">
-                            {console.log({user}) }
-                            { user ? <Settings/> : <Registration/> }
+                            {console.log(this.state.loggedIn) }
+                            { this.state.loggedIn ? <Settings/> : <Registration/> }
                         </Route>
                         <Route path="/write">
-                            { user ? <Write/> : <Home/> }
+                            { this.state.loggedIn ? <Write/> : <Home/> }
                         </Route>
                         <Route path="/post/:postId">
                             <Story/>
