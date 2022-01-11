@@ -1,7 +1,7 @@
 {
   "name": "motekso-frontend",
   "version": "0.1.0",
-  "private": true,
+  "private": false,
   "dependencies": {
     "axios": "^0.24.0",
     "http-proxy-middleware": "^2.0.1",
@@ -24,6 +24,5 @@
     "not dead",
     "not ie <= 11",
     "not op_mini all"
-  ],
-  "proxy": "http://api.motekso.co.uk"
+  ]
 }
