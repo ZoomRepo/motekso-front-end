@@ -1,7 +1,7 @@
 import { AxiosPost, AxiosDelete } from "../AxiosWrapper";
 
 export const upsertCategory = (name, description) => {
-  return AxiosPost(`http://api.motekso.co.uk/category`, {
+  return AxiosPost(`/category`, {
     name: name,
     description: description
   });
@@ -9,10 +9,10 @@ export const upsertCategory = (name, description) => {
 
 export const getCategories = () => {
   // Assign Dynamic value to change on enviornment change and for different services if needed
-return AxiosDelete(`http://api.motekso.co.uk/categories`);
+return AxiosDelete(`/categories`);
 };
 
 export const deleteCategory = () => {
   // Assign Dynamic value to change on enviornment change and for different services if needed
-return AxiosDelete(`http://api.motekso.co.uk/category`);
+return AxiosDelete(`/category`);
 };

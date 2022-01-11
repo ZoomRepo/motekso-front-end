@@ -2,7 +2,7 @@ import { AxiosPost, AxiosGet, AxiosDelete } from "../AxiosWrapper";
 
 export const upsertUser = (username, password, email) => {
     // Assign Dynamic value to change on enviornment change and for different services if needed
-  return AxiosPost(`http://api.motekso.co.uk/user`, {
+  return AxiosPost(`/user`, {
     username: username,
     password: password,
     email: email
@@ -11,19 +11,19 @@ export const upsertUser = (username, password, email) => {
 
 export const getUser = (username) => {
   // Assign Dynamic value to change on enviornment change and for different services if needed
-  return AxiosGet(`http://api.motekso.co.uk/users`,{
+  return AxiosGet(`/users`,{
     username: username
   });
 };
 
 export const getUsers = () => {
   // Assign Dynamic value to change on enviornment change and for different services if needed
-  return AxiosGet(`http://api.motekso.co.uk/users`);
+  return AxiosGet(`/users`);
 };
 
 export const deleteUser = (username) => {
   // Assign Dynamic value to change on enviornment change and for different services if needed
-  return AxiosDelete(`http://api.motekso.co.uk/user`,{
+  return AxiosDelete(`http://motekso.co.uk/user`,{
     username: username
   });
 };

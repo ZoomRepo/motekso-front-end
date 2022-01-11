@@ -2,7 +2,7 @@ import { AxiosPost, AxiosGet, AxiosDelete } from "../AxiosWrapper";
 
 export const upsertPost = (title, description, category, author, date) => {
     // Assign Dynamic value to change on enviornment change and for different services if needed
-  return AxiosPost(`http://api.motekso.co.uk/post`, {
+  return AxiosPost(`/post`, {
     title: title,
     description: description,
     category: category,
@@ -13,19 +13,19 @@ export const upsertPost = (title, description, category, author, date) => {
 
 export const getPost = (title) => {
   // Assign Dynamic value to change on enviornment change and for different services if needed
-  return AxiosGet(`http://api.motekso.co.uk/posts`,{
+  return AxiosGet(`/posts`,{
     title: title
   });
 };
 
 export const getPosts = () => {
   // Assign Dynamic value to change on enviornment change and for different services if needed
-  return AxiosGet(`http://api.motekso.co.uk/posts`);
+  return AxiosGet(`/posts`);
 };
 
 export const deletePost = (postname) => {
   // Assign Dynamic value to change on enviornment change and for different services if needed
-  return AxiosDelete(`http://api.motekso.co.uk/post`,{
+  return AxiosDelete(`/post`,{
     title: title
   });
 };
