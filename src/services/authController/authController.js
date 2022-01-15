@@ -1,7 +1,7 @@
 import { AxiosPost } from "../AxiosWrapper";
 
 export const signIn = (username, password) => {
-  return AxiosPost(`http://motekso.co.uk/api//token`, {
+  return AxiosPost(`/token`, {
     username: username,
     password: password
   });
