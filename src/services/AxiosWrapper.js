@@ -16,11 +16,11 @@ const axiosInstance = () => {
   const axiosInstance = Axios.create({
     headers: {
     // 'Access-Control-Allow-Origin': '*',
-    'Content-Type': 'application/json',
-    Authorization: localStorage.getItem("token"),
+    // 'Content-Type': 'application/json',
+    // Authorization: localStorage.getItem("token"),
     },
     cancelToken: callCancel.token,
-    baseURL: 'http://localhost:8001/'
+    baseURL: 'http://backend:8000/'
   });
   
   axiosInstance.interceptors.response.use(handleSuccess, handleError);
