@@ -12,12 +12,14 @@ const handleError = error => {
 };
 
 const axiosInstance = () => {
+  var token = localStorage.getItem("token")
+
   // TODO: Fix CORS Issue
   const axiosInstance = Axios.create({
     headers: {
     'Access-Control-Allow-Origin': '*',
     'Content-Type': 'application/json',
-    Authorization: localStorage.getItem("token"),
+    Authorization: token ? "" : token ,
     },
     cancelToken: callCancel.token,
     baseURL: 'http://motekso.co.uk/api'
