@@ -19,7 +19,7 @@ const axiosInstance = () => {
     headers: {
     'Access-Control-Allow-Origin': '*',
     'Content-Type': 'application/json',
-    Authorization: token ? "" : token ,
+    Authorization: ""+token,
     },
     cancelToken: callCancel.token,
     baseURL: 'http://motekso.co.uk/api'
