@@ -20,7 +20,7 @@ const axiosInstance = () => {
     // Authorization: localStorage.getItem("token"),
     },
     cancelToken: callCancel.token,
-    baseURL: 'http://backend:8000/'
+    baseURL: 'http://motekso.co.uk/api'
   });
   
   axiosInstance.interceptors.response.use(handleSuccess, handleError);

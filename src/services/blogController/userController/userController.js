@@ -23,7 +23,7 @@ export const getUsers = () => {
 
 export const deleteUser = (username) => {
   // Assign Dynamic value to change on enviornment change and for different services if needed
-  return AxiosDelete(`http://motekso.co.uk/user`,{
+  return AxiosDelete(`/user`,{
     username: username
   });
 };
