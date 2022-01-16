@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
 import { Link } from "react-router-dom"
+import { signOut } from '../../../services/authController/authController'
 
 class NavBar extends Component {
     render() {
-        const user = false;
+        const user = this.props.Token;
 
         return (
             <div class="navbar">
@@ -24,7 +25,7 @@ class NavBar extends Component {
                         {/* <li class="navBarLink"><Link class="link" to="/">About</Link></li>
                         <li class="navBarLink"><Link class="link" to="/">Contact</Link></li> */}
                         <li class="navBarLink">{user && <Link class="link" to="/write">Write</Link>}</li>
-                        <li class="navBarLink">{user && <Link class="link" to="/logout">Logout</Link>}</li>
+                        <li class="navBarLink">{user && <Link class="link" to="/logout" onClick={() => signOut()}>Logout</Link>}</li>
                     </ul>
                 </div>
                 <div class="topRight">

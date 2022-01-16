@@ -5,14 +5,9 @@ export class Posts extends Component {
     render() {
         return (
             <div class="posts">
-                <Post/>
-                <Post/>
-                <Post/>
-                <Post/>
-                <Post/>
-                <Post/>
-                <Post/>
-                <Post/>
+                {/* TODO: Implement map for posts */ }
+                <Post content=""/>
+              
             </div>
         )
     }
