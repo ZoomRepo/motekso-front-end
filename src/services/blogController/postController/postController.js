@@ -1,4 +1,4 @@
-import { AxiosPost, AxiosGet, AxiosDelete } from "../AxiosWrapper";
+import { AxiosPost, AxiosGet, AxiosDelete } from "../../AxiosWrapper";
 
 export const upsertPost = (title, description, category, author, date) => {
     // Assign Dynamic value to change on enviornment change and for different services if needed
@@ -11,21 +11,25 @@ export const upsertPost = (title, description, category, author, date) => {
     });
 };
 
-export const getPost = (title) => {
-  // Assign Dynamic value to change on enviornment change and for different services if needed
-  return AxiosGet(`/posts`,{
-    title: title
-  });
-};
-
-export const getPosts = () => {
+export const getAllPosts = () => {
   // Assign Dynamic value to change on enviornment change and for different services if needed
   return AxiosGet(`/posts`);
 };
 
-export const deletePost = (postname) => {
+export const getPost = (id) => {
+  var url = "/story/"+id
+  // Assign Dynamic value to change on enviornment change and for different services if needed
+  return AxiosGet(url);
+};
+
+export const updatePost = (id) => {
+  // Assign Dynamic value to change on enviornment change and for different services if needed
+  return AxiosPost(`/post`);
+};
+
+export const deletePost = (id) => {
   // Assign Dynamic value to change on enviornment change and for different services if needed
   return AxiosDelete(`/post`,{
-    title: title
+    _id: id
   });
 };

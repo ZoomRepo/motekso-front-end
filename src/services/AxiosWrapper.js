@@ -12,8 +12,8 @@ const handleError = error => {
 };
 
 const axiosInstance = () => {
-  var token = localStorage.getItem("token")
-
+  var token = localStorage.getItem("token");
+  console.log(token);
   // TODO: Fix CORS Issue
   const axiosInstance = Axios.create({
     headers: {
@@ -22,7 +22,7 @@ const axiosInstance = () => {
     Authorization: ""+token,
     },
     cancelToken: callCancel.token,
-    baseURL: 'http://motekso.co.uk/api'
+    baseURL: 'http://localhost/api'
   });
   
   axiosInstance.interceptors.response.use(handleSuccess, handleError);
@@ -38,5 +38,5 @@ export const AxiosDelete = (url, config) => {
   };
 
 export const AxiosGet = (url, config) => {
-  return axiosInstance().get(url, data, config);
+  return axiosInstance().get(url, config);
 };
