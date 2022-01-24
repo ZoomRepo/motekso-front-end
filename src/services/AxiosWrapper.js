@@ -34,7 +34,7 @@ export const AxiosPost = (url, data, config) => {
 };
 
 export const AxiosDelete = (url, config) => {
-    return axiosInstance().delete(url, data, config);
+    return axiosInstance().delete(url, config);
   };
 
 export const AxiosGet = (url, config) => {

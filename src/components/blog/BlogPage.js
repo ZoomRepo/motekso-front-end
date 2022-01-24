@@ -58,11 +58,10 @@ class BlogPage extends Component {
                             { this.state.loggedIn ? <Home/> : <Registration/> }
                         </Route>
                         <Route path="/settings">
-                            {console.log(this.state.loggedIn) }
                             { this.state.loggedIn ? <Settings/> : <Registration/> }
                         </Route>
                         <Route path="/write">
-                            { this.state.loggedIn ? <Write/> : <Home/> }
+                            { this.state.loggedIn ? <Write Token={this.state.token}/> : <Home/> }
                         </Route>
                         <Route path="/post/:postId">
                             <Story/>

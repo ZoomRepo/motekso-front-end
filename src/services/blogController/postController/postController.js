@@ -17,7 +17,7 @@ export const getAllPosts = () => {
 };
 
 export const getPost = (id) => {
-  var url = "/story/"+id
+  var url = "/post/"+id
   // Assign Dynamic value to change on enviornment change and for different services if needed
   return AxiosGet(url);
 };
@@ -29,7 +29,5 @@ export const updatePost = (id) => {
 
 export const deletePost = (id) => {
   // Assign Dynamic value to change on enviornment change and for different services if needed
-  return AxiosDelete(`/post`,{
-    _id: id
-  });
+  return AxiosDelete("/post/"+id);
 };

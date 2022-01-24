@@ -12,7 +12,6 @@ export class PostItem extends Component {
         return (
             <div class="post">
                 <img class="post-image" src={tempImage} alt="Post Image"/>
-                {console.log(this.props.Content)}
                 <div class="post-info" onClick={() => this.actOnId(this.props.Content._id)}>
                     <div class="post-categories">
                         <span class="post-category">Development, Business, Technology</span>
