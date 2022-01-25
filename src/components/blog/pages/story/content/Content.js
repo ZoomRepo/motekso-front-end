@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import tempPostImage from '../../../../../assets/images/who-are-we.jpg'
 import { getPost, deletePost } from '../../../../../services/blogController/postController/postController'
+import { Link } from "react-router-dom";
 
 export class PostContent extends Component {
     state = {
@@ -22,7 +23,9 @@ export class PostContent extends Component {
                     <img class="post-image" src={tempPostImage} alt="Post Image" />
                     <h1 class="post-title">{this.state.Post.title? this.state.Post.title: "Error loading Post Title..."}
                         <div class="post-edit">
+                            <Link to={`/write/${this.props.Id}`} class="link">                    
                             <i class="post-icon far fa-edit" />
+                            </Link>
                             <i onClick={() => {this.callDeletePost(this.state.Post.id)}} class="post-icon far fa-trash-alt" />
                         </div>
                     </h1>

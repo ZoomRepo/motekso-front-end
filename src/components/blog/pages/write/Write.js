@@ -2,43 +2,51 @@ import React, { Component } from "react";
 import { canUseEventListeners } from "react-twitter-embed";
 import tempPostImage from "../../../../assets/images/who-are-we.jpg";
 import parseJwt from "../../../../utils/parseJwt";
+import { getPost, upsertPost } from '../../../../services/blogController/postController/postController'
 
 export class Write extends Component {
   state = {
-    title: "",
-    description: "",
-    author: "ollie",
-    date: "",
+      Post: {}
   };
-
-  fillAndSubmit() {}
 
   componentDidMount() {
     var username = parseJwt(this.props.Token)["username"];
     if (username) {
       const pathname = window.location.pathname;
       const lastItem = pathname.substring(pathname.lastIndexOf("/") + 1);
+      var Post = {...this.state.Post}
 
       if (lastItem !== "write") {
-        this.setState({ _id: lastItem });
+        getPost(lastItem).then(res =>  {
+            Post.description = res.description;
+            Post.title = res.title;
+            Post._id = res._id;
+        })
       }
-      
-      this.setState({ author: username });
-      this.setState({ date: Date().toLocaleString() });
+
+      Post.author = username;
+      Post.date = Date().toLocaleString();
+
+      this.setState({Post})
     }
   }
 
   changeEvent = (e) => {
-    this.setState({
-      [e.target.name]: e.target.value,
-    });
-  };
+    this.setState({Post: { ...this.state.Post, [e.target.name]:e.target.value } });
+  }
+
+  validatePostContent() {
+     if (this.state.Post.title  !== "" && this.state.Post.description !== "") {
+        upsertPost(this.state.Post).then(res =>  console.log(res)).catch(err => console.log(err))
+     } else {
+        alert("Please write a story for me to Post... Stories don't write themselves...")
+     }
+  }
 
   render() {
     return (
       <div class="write">
         <img class="story-image" src={tempPostImage} alt="" />
-        <form class="form">
           <div class="form-collection">
             <label htmlFor="fileUpload">
               <i class="upload-icon fas fa-plus"></i>
@@ -65,11 +73,10 @@ export class Write extends Component {
               }}
               type="text"
             ></textarea>
-            <button class="submit" onClick={() => this.fillAndSubmit}>
+            <button class="submit" onClick={() => this.validatePostContent()}>
               Publish
             </button>
           </div>
-        </form>
       </div>
     );
   }

@@ -1,14 +1,15 @@
 import { AxiosPost, AxiosGet, AxiosDelete } from "../../AxiosWrapper";
 
-export const upsertPost = (title, description, category, author, date) => {
-    // Assign Dynamic value to change on enviornment change and for different services if needed
-  return AxiosPost(`/post`, {
-    title: title,
-    description: description,
-    category: category,
-    author: author,
-    date: date
-    });
+export const upsertPost = (post) => {
+  
+  const postData = {
+    title: post.title,
+    description: post.description, 
+    author: post.author, 
+    date: post.date
+  }
+  console.log(postData)
+  return AxiosPost(`/post`, postData);
 };
 
 export const getAllPosts = () => {
