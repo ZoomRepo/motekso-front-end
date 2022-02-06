@@ -30,14 +30,14 @@ class NavBar extends Component {
                 </div>
                 <div class="topRight">
                     {user ?
-                   (<img class="topImage" src="https://bestcellphonespyapps.com/wp-content/uploads/2017/09/pexels-photo-220453-1-768x786.jpeg"/>
+                   (<img class="topImage" hidden="true" src="https://bestcellphonespyapps.com/wp-content/uploads/2017/09/pexels-photo-220453-1-768x786.jpeg"/>
                     ):
                     (<ul class="navBarLinks">
                          <li class="navBarLink"><Link class="link" to="/login">Login</Link></li>
                          <li class="navBarLink"><Link class="link" to="/registration">Register</Link></li>
                     </ul>)
                 }
-                    <i class="topSearchIcon fas fa-search"></i>
+                   {/* TODO: Fix and Unhide Profile <i  class="topSearchIcon fas fa-search"></i> */}
                 </div>
             </div>
         );

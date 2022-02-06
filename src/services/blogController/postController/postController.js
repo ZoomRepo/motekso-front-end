@@ -8,7 +8,6 @@ export const upsertPost = (post) => {
     author: post.author, 
     date: post.date
   }
-  console.log(postData)
   return AxiosPost(`/post`, postData);
 };
 

@@ -6,9 +6,11 @@ export class Sidebar extends Component {
         return (
             <div class="social-sidebar">
                 <div class="section">
-                    <span class="title">WHO ARE WE</span>
+                    <span class="title">WHAT DO WE DO</span>
                     <img src={whoAreWe} alt="who-are-we" />
-                    <p>lorem ipsum dolor sit amet, consectetur adip, lorem ips dolor, lorem ipsum dolor, lorem ipsum dolor.</p>
+                    <p>We research and utilise Modern Tech Solutions (Motekso).<br/>
+                    The prmary goal is to carry out research in many areas pull it together and generate more ideas and money to carry on investing into new projects. <br/>
+                    The aim is to share this research and build out the community so that others can learn and benefit from the process as well. </p> 
                 </div>
                 <div class="section">
                     <span class="title">CATEGORIES</span>
