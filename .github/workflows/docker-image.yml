@@ -3,7 +3,7 @@ name: motekso-front-end-pipeline
 on:
   push:
     branches:
-      - 'main'
+      - 'production'
 
 jobs:
   docker:
