@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import Post from '../post-item/PostItem'
+import PostItem from '../post-item/PostItem'
 import {getAllPosts} from '../../../../../services/blogController/postController/postController'
 
 export class Posts extends Component {
@@ -19,7 +19,7 @@ export class Posts extends Component {
                 {/* TODO: Implement map for posts */ }
                 {this.state.Posts ? 
                 this.state.Posts.map(post =>
-                <Post key={post.key} Content={post}/>
+                <PostItem Content={post}/>
                 ) : "Error fetching posts..."}
             </div>
         )

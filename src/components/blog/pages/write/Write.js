@@ -1,21 +1,15 @@
 import React, { Component } from "react";
-import { canUseEventListeners } from "react-twitter-embed";
-import tempPostImage from "../../../../assets/images/who-are-we.jpg";
-import parseJwt from "../../../../utils/parseJwt";
-import {
-  getPost,
-  upsertPost,
-} from "../../../../services/blogController/postController/postController";
-import {
-  uploadFile,
-  getFile,
-} from "../../../../services/blogController/fileController/FileController";
+import UploadPostImage from "./image/uploadPostImage";
+import PostImage from "./image/postImage";
+import { upsertPost } from "../../../../services/blogController/postController/postController";
+import { getFile } from '../../../../services/blogController/fileController/FileController'
+import PostDetail from './content/postDetails'
+import parseJwt from '../../../../utils/parseJwt'
 
 export class Write extends Component {
   state = {
-    postImage:{},
     Post: {
-      image: [],
+      image: "",
     },
   };
 
@@ -24,54 +18,25 @@ export class Write extends Component {
     if (username) {
       const pathname = window.location.pathname;
       const lastItem = pathname.substring(pathname.lastIndexOf("/") + 1);
+
       var Post = { ...this.state.Post };
       if (lastItem !== "write") {
-        getPost(lastItem).then((res) => {
-          Post.description = res.description;
-          Post.title = res.title;
-          Post._id = res._id;
+        getFile(lastItem).then((res) => {
+          Post._id = lastItem;
         });
-      }
 
-      Post.author = username;
-      Post.date = Date().toLocaleString();
-      console.log(Post);
-      this.setState({ Post });
+        Post.author = username;
+        Post.date = Date().toLocaleString();
+        this.setState({ Post });
+      }
     }
   }
 
-  onFileChange = (event) => {
-    // Update the state
-    const formData = new FormData();
-
-    // Update the formData object
-    formData.append(
-      "myFile",
-      event.target.files[0],
-      event.target.files[0].name
-    );
-
-    // Request made to the backend api
-    // Send formData object
-    uploadFile(formData)
-      .then((res) => {
-        if (res) {
-          var Post = { ...this.state.Post };
-          Post.image = res;
-          this.setState({ Post });
-          this.getPostImage();
-        }
-      })
-      .catch((err) => console.log(err));
+  updatePostImage = (image) => {
+    this.setState({
+      Post: { ...this.state.Post, image: image },
+    });
   };
-
-  getPostImage() {
-    getFile(this.state.Post.image)
-      .then((res) => {
-        this.setState({ postImage: res });
-      })
-      .catch((err) => console.log(err));
-  }
 
   changeEvent = (e) => {
     this.setState({
@@ -94,47 +59,15 @@ export class Write extends Component {
   render() {
     return (
       <div class="write">
-        {this.state.postImage ? (
-          <img class="story-image" src={tempPostImage} alt="" />
-        ) : (
-          <img class="story-image" src={postImage} alt="" />
-        )}
+        <PostImage postImage={this.state.Post.image} />
         <div class="form-collection">
-          <label htmlFor="fileUpload">
-            <i class="upload-icon fas fa-plus"></i>
-          </label>
-          {/* {this.state.Post.title ? <p>{this.state.Post.title}</p>:  <p>"No Post data"</p> } */}
-          <input
-            type="file"
-            id="fileUpload"
-            hidden="true"
-            onChange={(e) => this.onFileChange(e)}
-          />
-          <input
-            class="title-text"
-            name="title"
-            type="text"
-            placeholder="Title"
-            onChange={(e) => {
-              this.changeEvent(e);
-            }}
-            autoFocus="true"
-          />
-        </div>
-        <div class="form-collection">
-          <textarea
-            class="story-text"
-            name="description"
-            placeholder="Tell you story..."
-            onChange={(e) => {
-              this.changeEvent(e);
-            }}
-            type="text"
-          ></textarea>
+          <UploadPostImage updatePostImage={this.updatePostImage} />
+          <PostDetail changeEvent={this.changeEvent} Post={this.state.Post} />
           <button class="submit" onClick={() => this.validatePostContent()}>
             Publish
           </button>
         </div>
+        {/* <PostDetails/> */}
       </div>
     );
   }

@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import tempPostImage from '../../../../../assets/images/who-are-we.jpg'
 import { getPost, deletePost } from '../../../../../services/blogController/postController/postController'
 import { Link } from "react-router-dom";
+import PostImage from './image/postImage'
 
 export class PostContent extends Component {
     state = {
@@ -20,7 +21,7 @@ export class PostContent extends Component {
         return (
             <div class="post-content">
                 <div class="post-content-wrapper">
-                    <img class="post-image" src={tempPostImage} alt="Post Image" />
+                  <PostImage Post={this.state.Post}/>
                     <h1 class="post-title">{this.state.Post.title? this.state.Post.title: "Error loading Post Title..."}
                         <div class="post-edit">
                             <Link to={`/write/${this.props.Id}`} class="link">                    

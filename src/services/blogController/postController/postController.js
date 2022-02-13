@@ -6,6 +6,7 @@ export const upsertPost = (post) => {
     title: post.title,
     description: post.description, 
     author: post.author, 
+    image: post.image,
     date: post.date
   }
   return AxiosPost(`/post`, postData);

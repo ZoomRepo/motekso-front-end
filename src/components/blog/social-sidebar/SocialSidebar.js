@@ -8,8 +8,8 @@ export class Sidebar extends Component {
                 <div class="section">
                     <span class="title">WHAT DO WE DO</span>
                     <img src={whoAreWe} alt="who-are-we" />
-                    <p>We research and utilise Modern Tech Solutions (Motekso).<br/>
-                    The prmary goal is to carry out research in many areas pull it together and generate more ideas and money to carry on investing into new projects. <br/>
+                    <p>We research and utilise Modern Tech Solutions (Motekso).<br/><br/>
+                    The primary goal is to carry out research in many areas pull it together and generate more ideas and money to carry on investing into new projects. <br/><br/>
                     The aim is to share this research and build out the community so that others can learn and benefit from the process as well. </p> 
                 </div>
                 <div class="section">
@@ -22,10 +22,9 @@ export class Sidebar extends Component {
                         <li class="list-item">Research</li>
                         <li class="list-item">Crypto</li>
                         <li class="list-item">Development</li>
-                        <li class="list-item">Business</li>
                     </ul>
                 </div>
-                <div class="section">
+                {/* <div class="section">
                         <span class="title">FOLLOW US</span>
                         <div class="social-icons">
                             <a href="https://twitter.com/MoteksoUK">
@@ -38,7 +37,7 @@ export class Sidebar extends Component {
                                 <i class="icon fab fa-discord"></i>
                             </a>
                         </div>
-                </div>
+                </div> */}
             </div>
         )
     }
