@@ -11,10 +11,9 @@ export class Login extends Component {
     login() {
         signIn(this.state.username, this.state.password).then(res => {
             if (res !== null && res !== undefined) {
-                localStorage.setItem("token", res);
+                localStorage.setItem("token", res.Value);
                 this.props.AuthenticateApplication();
             }
-            console.log(res)
         }, (error) => {
             console.log(error);
           })

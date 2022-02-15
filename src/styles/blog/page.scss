@@ -1,65 +1,64 @@
-.blog{
+.blog {
     width: 100vw;
     font-size: 22px;
     min-height: 100vh;
-    font-family: "Indie Flower";   
+    font-family: "Indie Flower";
     .write {
         padding-top: 50px;
         .story-image {
             margin-left: 150px;
             width: 70vw;
-            height: 250px;
+            height: 400px;
             border-radius: 10px;
             object-fit: cover;
         }
-        .form {
-            .form-collection {
-                margin-left: 150px;
-                position: relative;
+        .form-collection {
+            margin-left: 150px;
+            position: relative;
+            display: flex;
+            .upload-icon {
+                width: 25px;
+                height: 25px;
+                margin-top: 20px;
+                border-radius: 50%;
+                border: 1px solid;
                 display: flex;
-                .upload-icon {
-                    width: 25px;
-                    height: 25px;
-                    margin-top: 20px;
-                    border-radius: 50%;
-                    border: 1px solid;
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
-                    color: #151515;
-                    cursor: pointer;
+                align-items: center;
+                justify-content: center;
+                color: #151515;
+                cursor: pointer;
+            }
+            .title-text {
+                font-size: 28px;
+            }
+            .story-text {
+                font-size: 22px !important;
+            }
+            .title-text,
+            .story-text {
+                border: none;
+                font-size: 30px;
+                padding: 20px;
+                width: 70vw;
+                font-family: "Indie Flower";
+                color: #151515;
+                background: #dfdfdf;
+                &:focus {
+                    outline: none;
                 }
-                .title-text {
-                    font-size: 28px;
-                }
-                .story-text{
-                    font-size: 22px !important;
-                }
-                .title-text, .story-text {
-                    border: none;
-                    font-size: 30px;
-                    padding: 20px;
-                    width: 70vw;
-                    font-family: 'Indie Flower';
-                    color: #151515;
-                    background: #dfdfdf;
-                    &:focus {
-                        outline: none;
-                    }
-                }
-                .submit {
-                    font-family: 'fira sans';
-                    position: absolute;
-                    top: 20px;
-                    right: 50px;
-                    color: white;
-                    background-color: teal;
-                    padding: 10px;
-                    border: none;
-                    border-radius: 10px;
-                    font-size: 16px;
-                    cursor: pointer;
-                }
+            }
+            .submit {
+                font-family: "fira sans";
+                position: absolute;
+                top: 20px;
+                right: 50px;
+                color: white;
+                background-color: teal;
+                padding: 10px;
+                border: none;
+                border-radius: 10px;
+                font-size: 16px;
+                cursor: pointer;
             }
         }
     }
@@ -70,9 +69,10 @@
         height: 50px;
         position: sticky;
         display: flex;
-        top:0;
+        top: 0;
         z-index: 1;
-        .topLeft, .topRight {
+        .topLeft,
+        .topRight {
             flex: 3;
             display: flex;
             align-items: center;
@@ -102,12 +102,11 @@
         }
         .topImage {
             width: 40px;
-            height:40px;
+            height: 40px;
             border-radius: 50%;
             object-fit: cover;
         }
         .topCenter {
-
             flex: 6;
             .navBarLinks {
                 display: flex;
@@ -133,7 +132,7 @@
             cursor: pointer;
         }
     }
-    
+
     .post-page {
         display: flex;
         background: #dfdfdf;
@@ -142,8 +141,8 @@
             flex: 9;
             .post-content-wrapper {
                 .post-image {
-                    width:100%;
-                    height:400px;
+                    width: 100%;
+                    height: 400px;
                     object-fit: cover;
                     border-radius: 5px;
                 }
@@ -181,7 +180,12 @@
             }
         }
         .social-sidebar {
-            flex:3;
+            flex: 3;
+            .section {
+                p {
+                    font-family: "Fira Sans";
+                }
+            }
         }
     }
 
@@ -228,10 +232,10 @@
                     &:focus {
                         outline-style: none;
                     }
-                  }
+                }
             }
             .profile-picture {
-                display:flex;
+                display: flex;
                 align-items: center;
                 margin-top: 10px;
                 margin-bottom: 10px;
@@ -265,7 +269,7 @@
                 border-radius: 10px;
                 border-bottom: 1px solid lightgray;
                 cursor: pointer;
-              }
+            }
         }
     }
 
@@ -275,7 +279,8 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        background: linear-gradient(rgba(255,255,255, 0.4),rgba(0,0,0, 0.6)), url("https://c.pxhere.com/images/7d/21/ed588c6f9dd84ff1cf8f96100885-1450843.jpg!d");
+        background: linear-gradient(rgba(255, 255, 255, 0.4), rgba(0, 0, 0, 0.6)),
+            url("https://c.pxhere.com/images/7d/21/ed588c6f9dd84ff1cf8f96100885-1450843.jpg!d");
         background-size: cover;
         font-family: "Fira Sans";
         .title {
@@ -304,12 +309,12 @@
                 font-size: 20px !important;
                 margin-top: 20px;
                 cursor: pointer;
-                color:#fff;
+                color: #fff;
                 background-color: #fb7e14;
                 padding: 10px;
-                border:none;
+                border: none;
                 border-radius: 10px;
-            }   
+            }
         }
         .register-button {
             font-size: 18px;
@@ -320,7 +325,7 @@
             top: 60px;
             right: 20px;
             cursor: pointer;
-            border:none;
+            border: none;
             border-radius: 10px;
         }
     }
@@ -331,7 +336,8 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        background: linear-gradient(rgba(255,255,255, 0.4),rgba(0,0,0, 0.6)), url("https://c.pxhere.com/images/7d/21/ed588c6f9dd84ff1cf8f96100885-1450843.jpg!d");
+        background: linear-gradient(rgba(255, 255, 255, 0.4), rgba(0, 0, 0, 0.6)),
+            url("https://c.pxhere.com/images/7d/21/ed588c6f9dd84ff1cf8f96100885-1450843.jpg!d");
         background-size: cover;
         .title {
             font-size: 50px;
@@ -361,12 +367,12 @@
                 font-size: 20px !important;
                 margin-top: 20px;
                 cursor: pointer;
-                color:#fff;
+                color: #fff;
                 background-color: #fb7e14;
                 padding: 10px;
-                border:none;
+                border: none;
                 border-radius: 10px;
-            }   
+            }
         }
     }
 }

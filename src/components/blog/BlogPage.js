@@ -10,29 +10,40 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 class BlogPage extends Component {
     state = {
-        loggedIn: false
+        loggedIn: false,
+        token: null
     }
     
   authenticateApplication() {
-    if(localStorage.getItem("token") !== null) {
-          this.setState({ loggedIn: true });
+    var token = localStorage.getItem("token")
+    if(token !== null) {
+          this.setState({ 
+              loggedIn: true,
+              token: token });
       } else  {
-      this.setState({ loggedIn: false });
+      this.setState({ 
+          loggedIn: false,
+        token: null });
     }
   }
-  
-  componentWillMount() {
-    if(localStorage.getItem('token')) {
-      this.setState({ loggedIn: true });
-    } else  {
-      this.setState({ loggedIn: false });
-    }
+
+  componentDidMount() {
+    var token = localStorage.getItem("token")
+    if(token !== null) {
+          this.setState({ 
+              loggedIn: true,
+              token: token });
+      } else  {
+      this.setState({ 
+          loggedIn: false,
+        token: null });
+    } 
   }
     render() {
         return (
             <div class="blog">
                 <Router>
-                    <NavBar/>
+                    <NavBar Token={this.state.token}/>
                     <Switch>
                         <Route exact path="/">
                             <Home/>
@@ -47,11 +58,10 @@ class BlogPage extends Component {
                             { this.state.loggedIn ? <Home/> : <Registration/> }
                         </Route>
                         <Route path="/settings">
-                            {console.log(this.state.loggedIn) }
                             { this.state.loggedIn ? <Settings/> : <Registration/> }
                         </Route>
                         <Route path="/write">
-                            { this.state.loggedIn ? <Write/> : <Home/> }
+                            { this.state.loggedIn ? <Write Token={this.state.token}/> : <Home/> }
                         </Route>
                         <Route path="/post/:postId">
                             <Story/>

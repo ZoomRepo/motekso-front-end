@@ -3,8 +3,8 @@
     margin-top: 20px;
     margin-right: 60px;
     padding-bottom: 30px;
-    background-color: #151515;
-    color:#dfdfdf;
+    //background-color: #151515;
+    color:#151515;
     border-radius: 10px;
     display: flex;
     flex-direction: column;
@@ -30,7 +30,8 @@
             width: 80%;
         }
         p {
-            padding: 30px;
+            padding: 60px;
+            font-family: "Fira Sans";
         }
         &:first-child{
             margin-left: 20px;
