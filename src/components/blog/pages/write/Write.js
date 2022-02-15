@@ -1,52 +1,52 @@
-import React, { Component } from "react";
+import React, { Component, useState, useEffect } from "react";
 import UploadPostImage from "./image/uploadPostImage";
 import PostImage from "./image/postImage";
-import { upsertPost } from "../../../../services/blogController/postController/postController";
+import { upsertPost, getPost } from "../../../../services/blogController/postController/postController";
 import { getFile } from '../../../../services/blogController/fileController/FileController'
 import PostDetail from './content/postDetails'
 import parseJwt from '../../../../utils/parseJwt'
 
-export class Write extends Component {
-  state = {
-    Post: {
-      image: "",
-    },
-  };
+function Write({Token}) {
+  const [post, setPost] = useState({Post:{}});
 
-  componentDidMount() {
-    var username = parseJwt(this.props.Token)["username"];
+
+  useEffect(() => {
+    var username = parseJwt(Token)["username"];
+    const pathname = window.location.pathname;
+    const lastItem = pathname.substring(pathname.lastIndexOf("/") + 1);
+    var Post = { ...post };
+
     if (username) {
-      const pathname = window.location.pathname;
-      const lastItem = pathname.substring(pathname.lastIndexOf("/") + 1);
-
-      var Post = { ...this.state.Post };
-      if (lastItem !== "write") {
-        getFile(lastItem).then((res) => {
-          Post._id = lastItem;
-        });
-
-        Post.author = username;
-        Post.date = Date().toLocaleString();
-        this.setState({ Post });
-      }
+      Post.author = username;
+      Post.date = Date().toLocaleString();
     }
-  }
 
-  updatePostImage = (image) => {
-    this.setState({
-      Post: { ...this.state.Post, image: image },
+    if (lastItem !== "write") {
+      getPost(lastItem).then((res) => {
+        Post.title = res.title;
+        Post.image = res.image;
+        Post.date = res.date;
+        Post.description = res.description;
+      });
+    }
+    setPost({ Post });
+  },[post]);
+
+  function updatePostImage(image) {
+    setPost({
+      Post: { ...post, image: image },
     });
   };
 
-  changeEvent = (e) => {
-    this.setState({
-      Post: { ...this.state.Post, [e.target.name]: e.target.value },
+  function changeEvent(e) {
+    setPost({
+      Post: { ...post, [e.target.name]: e.target.value },
     });
   };
 
-  validatePostContent() {
-    if (this.state.Post.title !== "" && this.state.Post.description !== "") {
-      upsertPost(this.state.Post)
+  function validatePostContent() {
+    if (post.title !== "" && post.description !== "") {
+      upsertPost(post)
         .then((res) => console.log(res))
         .catch((err) => console.log(err));
     } else {
@@ -54,16 +54,15 @@ export class Write extends Component {
         "Please write a story for me to Post... Stories don't write themselves..."
       );
     }
-  }
+  };
 
-  render() {
     return (
       <div class="write">
-        <PostImage postImage={this.state.Post.image} />
+        <PostImage Post={post} />
         <div class="form-collection">
-          <UploadPostImage updatePostImage={this.updatePostImage} />
-          <PostDetail changeEvent={this.changeEvent} Post={this.state.Post} />
-          <button class="submit" onClick={() => this.validatePostContent()}>
+          <UploadPostImage updatePostImage={updatePostImage} />
+          <PostDetail changeEvent={changeEvent} Post={post} />
+          <button class="submit" onClick={() => validatePostContent()}>
             Publish
           </button>
         </div>
@@ -71,6 +70,5 @@ export class Write extends Component {
       </div>
     );
   }
-}
 
 export default Write;

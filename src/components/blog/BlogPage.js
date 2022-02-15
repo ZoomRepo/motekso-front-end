@@ -64,7 +64,7 @@ class BlogPage extends Component {
                             { this.state.loggedIn ? <Write Token={this.state.token}/> : <Home/> }
                         </Route>
                         <Route path="/post/:postId">
-                            <Story/>
+                            <Story Token={this.state.token} />
                         </Route>
                     </Switch>
                 </Router>

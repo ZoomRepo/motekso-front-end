@@ -1,28 +1,29 @@
 import React, { Component, useEffect, useState } from "react";
-import tempPostImage from "../../../../../assets/images/who-are-we.jpg";
+import tempImage from "../../../../../assets/images/who-are-we.jpg";
 import { Image } from "react-bootstrap";
 import {
   uploadFile,
   getFile,
 } from "../../../../../services/blogController/fileController/FileController";
 
-function PostImage({ postImage }) {
+function PostImage({ Post }) {
   const [image, setImage] = useState();
 
   React.useEffect(() => {
-    if (postImage) { 
-      getFile(postImage).then((res) =>
+    if (Post.image) {
+      console.log(Post)
+      getFile(Post.image).then((res) =>
         setImage(`data:image/jpeg;base64,${res.data}`)
       );
     }
-  });
+  }, [Post]);
 
   return (
     <div>
-      {postImage && image ? (
-        <img src={image} class="story-image"/>
+      {Post.image ? (
+        <img src={image} class="story-image" />
       ) : (
-        <img id="story-image" class="story-image" src={tempPostImage} alt="" />
+         <img class="story-image" src={tempImage} alt="Post Image"/>
       )}
     </div>
   );
