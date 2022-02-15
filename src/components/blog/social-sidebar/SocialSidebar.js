@@ -16,10 +16,7 @@ export class Sidebar extends Component {
                     <span class="title">CATEGORIES</span>
                     <ul class="list">
                         <li class="list-item">Technology</li>
-                        <li class="list-item">Science</li>
                         <li class="list-item">Investing</li>
-                        <li class="list-item">Sales</li>
-                        <li class="list-item">Research</li>
                         <li class="list-item">Crypto</li>
                         <li class="list-item">Development</li>
                     </ul>

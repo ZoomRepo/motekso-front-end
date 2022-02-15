@@ -1,15 +1,13 @@
 import React, { useEffect, useState } from "react";
 
-import {getPost} from '../../../../../services/blogController/postController/postController'
 function PostDetail({ changeEvent, Post }) {
   const [title, setTitle] = useState();
   const [story, setStory] = useState();
 
   React.useEffect(() => {
-    if (Post) {
-      getPost(Post.id).then(res => console.log(res))
-    }
-  });
+     setTitle(Post.title);
+     setStory(Post.description);
+  }, [Post]);
 
   return (
     <div>
@@ -18,6 +16,7 @@ function PostDetail({ changeEvent, Post }) {
             name="title"
             type="text"
             placeholder="Title"
+            value={title}
             onChange={(e) => {
               changeEvent(e);
             }}
@@ -28,6 +27,7 @@ function PostDetail({ changeEvent, Post }) {
             class="story-text"
             name="description"
             placeholder="Tell you story..."
+            vale={story}
             onChange={(e) => {
               changeEvent(e);
             }}

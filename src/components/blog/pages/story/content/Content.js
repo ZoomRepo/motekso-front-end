@@ -23,12 +23,12 @@ export class PostContent extends Component {
                 <div class="post-content-wrapper">
                   <PostImage Post={this.state.Post}/>
                     <h1 class="post-title">{this.state.Post.title? this.state.Post.title: "Error loading Post Title..."}
-                        <div class="post-edit">
+                       {this.props.Token? <div class="post-edit">
                             <Link to={`/write/${this.props.Id}`} class="link">                    
                             <i class="post-icon far fa-edit" />
                             </Link>
                             <i onClick={() => {this.callDeletePost(this.state.Post.id)}} class="post-icon far fa-trash-alt" />
-                        </div>
+                        </div>:""}
                     </h1>
                     <div class="post-info">
                         <span class="post-author">{this.state.Post.author? this.state.Post.author: "Error loading Post Author..."}</span>

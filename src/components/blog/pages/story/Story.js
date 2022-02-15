@@ -9,7 +9,7 @@ export class PostPage extends Component {
 
         return (
             <div class="post-page">
-                <PostContent Id={id}/>
+                <PostContent Token={this.props.Token} Id={id}/>
                 <Sidebar />
             </div>
         )
