@@ -13,6 +13,7 @@ function PostImage({ Post }) {
     if (Post.image) {
       console.log(Post)
       getFile(Post.image).then((res) =>
+      // console.log(res)
         setImage(`data:image/jpeg;base64,${res.data}`)
       );
     }
