@@ -1,0 +1,378 @@
+.blog {
+    width: 100vw;
+    font-size: 22px;
+    min-height: 100vh;
+    font-family: "Indie Flower";
+    .write {
+        padding-top: 50px;
+        .story-image {
+            margin-left: 150px;
+            width: 70vw;
+            height: 400px;
+            border-radius: 10px;
+            object-fit: cover;
+        }
+        .form-collection {
+            margin-left: 150px;
+            position: relative;
+            display: flex;
+            .upload-icon {
+                width: 25px;
+                height: 25px;
+                margin-top: 20px;
+                border-radius: 50%;
+                border: 1px solid;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                color: #151515;
+                cursor: pointer;
+            }
+            .title-text {
+                font-size: 28px;
+            }
+            .story-text {
+                font-size: 22px !important;
+            }
+            .title-text,
+            .story-text {
+                border: none;
+                font-size: 30px;
+                padding: 20px;
+                width: 70vw;
+                font-family: "Indie Flower";
+                color: #151515;
+                background: #dfdfdf;
+                &:focus {
+                    outline: none;
+                }
+            }
+            .submit {
+                font-family: "fira sans";
+                position: absolute;
+                top: 20px;
+                right: 50px;
+                color: white;
+                background-color: teal;
+                padding: 10px;
+                border: none;
+                border-radius: 10px;
+                font-size: 16px;
+                cursor: pointer;
+            }
+        }
+    }
+    .navbar {
+        font-family: "Fira Sans";
+        width: 100vw;
+        background: #151515;
+        height: 50px;
+        position: sticky;
+        display: flex;
+        top: 0;
+        z-index: 1;
+        .topLeft,
+        .topRight {
+            flex: 3;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            .navBarLinks {
+                display: flex;
+                justify-content: center;
+                margin: 0;
+                padding: 0;
+                list-style: none;
+                .navBarLink {
+                    text-transform: uppercase;
+                    color: #fb7e14;
+                    margin: 20px;
+                    margin-top: 15px;
+                    font-size: 18px;
+                    font-weight: 300;
+                    cursor: pointer;
+                }
+            }
+        }
+        .topIcon {
+            font-size: 20px;
+            margin-right: 10px;
+            color: #fb7e14;
+            cursor: pointer;
+        }
+        .topImage {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+        .topCenter {
+            flex: 6;
+            .navBarLinks {
+                display: flex;
+                justify-content: center;
+                margin: 0;
+                padding: 0;
+                list-style: none;
+                .navBarLink {
+                    text-transform: uppercase;
+                    color: #fb7e14;
+                    margin: 20px;
+                    margin-top: 15px;
+                    font-size: 18px;
+                    font-weight: 300;
+                    cursor: pointer;
+                }
+            }
+        }
+        .topSearchIcon {
+            font-size: 18px;
+            color: #fb7e14;
+            margin-left: 15px;
+            cursor: pointer;
+        }
+    }
+
+    .post-page {
+        display: flex;
+        background: #dfdfdf;
+        .post-content {
+            padding: 20px;
+            flex: 9;
+            .post-content-wrapper {
+                .post-image {
+                    width: 100%;
+                    height: 400px;
+                    object-fit: cover;
+                    border-radius: 5px;
+                }
+                .post-title {
+                    text-align: center;
+                    margin: 10px;
+                    font-size: 28px;
+                }
+                .post-edit {
+                    float: right;
+                    font-style: 16px;
+                    .post-icon {
+                        margin-left: 10px;
+                        cursor: pointer;
+                        color: tomato;
+                        &:first-child {
+                            color: teal;
+                        }
+                    }
+                }
+                // TODO: Check Alignment of Title for Story
+                .post-info {
+                    font-family: "Fira Sans";
+                    margin-bottom: 20px;
+                    display: flex;
+                    justify-content: space-between;
+                    font-size: 16px;
+                    color: #fb7e14;
+                }
+                .post-description {
+                    color: #373330;
+                    line-height: 25px;
+                    font-size: 22px;
+                }
+            }
+        }
+        .social-sidebar {
+            flex: 3;
+            .section {
+                p {
+                    font-family: "Fira Sans";
+                }
+            }
+        }
+    }
+
+    .home {
+        display: flex;
+    }
+
+    .settings {
+        font-family: "Fira Sans";
+        display: flex;
+        .user-wrapper {
+            flex: 9;
+            padding: 20px;
+            .user-header {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                .update-text {
+                    font-size: 30px;
+                    margin-bottom: 20px;
+                }
+                .delete-text {
+                    color: #fb7e14;
+                    font-size: 12px;
+                    font-weight: 600;
+                    cursor: pointer;
+                }
+            }
+            .form {
+                display: flex;
+                flex-direction: column;
+                label {
+                    font-size: 20px;
+                    margin-top: 20px;
+                }
+                input {
+                    color: #151515;
+                    background: #dfdfdf;
+                    margin-top: 10px;
+                    margin-bottom: 10px;
+                    height: 30px;
+                    border: none;
+                    border-bottom: 1px solid lightgray;
+                    &:focus {
+                        outline-style: none;
+                    }
+                }
+            }
+            .profile-picture {
+                display: flex;
+                align-items: center;
+                margin-top: 10px;
+                margin-bottom: 10px;
+                cursor: pointer;
+                img {
+                    width: 70px;
+                    height: 70px;
+                    border-radius: 20px;
+                    object-fit: cover;
+                }
+            }
+            .profile-icon {
+                width: 25px;
+                height: 25px;
+                border-radius: 50%;
+                background-color: #dfdfdf;
+                color: #373330;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                cursor: pointer;
+            }
+            .submit {
+                font-size: 18px;
+                background: #fb7e14;
+                margin-top: 10px;
+                margin-bottom: 10px;
+                height: 30px;
+                color: #ffff;
+                border: none;
+                border-radius: 10px;
+                border-bottom: 1px solid lightgray;
+                cursor: pointer;
+            }
+        }
+    }
+
+    .login {
+        height: calc(100vh - 50px);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background: linear-gradient(rgba(255, 255, 255, 0.4), rgba(0, 0, 0, 0.6)),
+            url("https://c.pxhere.com/images/7d/21/ed588c6f9dd84ff1cf8f96100885-1450843.jpg!d");
+        background-size: cover;
+        font-family: "Fira Sans";
+        .title {
+            font-size: 50px;
+        }
+        .form {
+            font-weight: 600;
+            margin-top: 20px;
+            display: flex;
+            width: 25%;
+            flex-direction: column;
+            label {
+                margin: 10px 0;
+            }
+            .login-input {
+                font-size: 18px;
+                padding: 10px;
+                background-color: #fff;
+                border: none;
+                border-radius: 10px;
+                &:focus {
+                    outline-style: none;
+                }
+            }
+            .login-button {
+                font-size: 20px !important;
+                margin-top: 20px;
+                cursor: pointer;
+                color: #fff;
+                background-color: #fb7e14;
+                padding: 10px;
+                border: none;
+                border-radius: 10px;
+            }
+        }
+        .register-button {
+            font-size: 18px;
+            position: absolute;
+            background-color: teal;
+            color: #fff;
+            padding: 10px;
+            top: 60px;
+            right: 20px;
+            cursor: pointer;
+            border: none;
+            border-radius: 10px;
+        }
+    }
+
+    .registration {
+        height: calc(100vh - 50px);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background: linear-gradient(rgba(255, 255, 255, 0.4), rgba(0, 0, 0, 0.6)),
+            url("https://c.pxhere.com/images/7d/21/ed588c6f9dd84ff1cf8f96100885-1450843.jpg!d");
+        background-size: cover;
+        .title {
+            font-size: 50px;
+            font-family: "Fira Sans";
+        }
+        .form {
+            font-family: "Fira Sans";
+            font-weight: 600;
+            margin-top: 20px;
+            display: flex;
+            width: 25%;
+            flex-direction: column;
+            label {
+                margin: 10px 0;
+            }
+            .login-input {
+                font-size: 18px;
+                padding: 10px;
+                background-color: #fff;
+                border: none;
+                border-radius: 10px;
+                &:focus {
+                    outline-style: none;
+                }
+            }
+            .register-button {
+                font-size: 20px !important;
+                margin-top: 20px;
+                cursor: pointer;
+                color: #fff;
+                background-color: #fb7e14;
+                padding: 10px;
+                border: none;
+                border-radius: 10px;
+            }
+        }
+    }
+}

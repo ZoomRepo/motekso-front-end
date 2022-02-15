@@ -1,0 +1,44 @@
+// TODO: Restyle Sidebar...
+.sidebar{
+    position: fixed;
+    width: 20vw;
+    background: #000;
+    height: 100vh;
+    border-right: 1px solid #373330;
+    img {
+        padding: 0px;
+        width:109%;
+        height: 35%;
+        margin-left: -20px;
+    }
+    ul {
+        color: #292929;
+        text-decoration: none;
+        list-style-type:none;
+        text-transform: uppercase;
+        font-weight: 300;
+        font-size: 18px;
+        padding-left: 0px;
+        li {
+            border-top: 0.1px solid #292929;
+            text-align: center;
+            padding-top: 20px;
+            padding-bottom: 20px;
+            &:last-child {
+                border-bottom: 0.1px solid #292929;
+            }
+            &.active {
+                border-color: #fb7e14;
+                color: #fb7e14;
+            }
+            &:hover { 
+                color: #dfdfdf;
+                border-color: #dfdfdf;
+                cursor: pointer;
+            }
+        }
+    }
+    h1 {
+        color: white;
+    }
+}
