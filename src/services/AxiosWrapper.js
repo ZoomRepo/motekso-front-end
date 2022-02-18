@@ -22,7 +22,7 @@ const axiosInstance = () => {
     Authorization: ""+token,
     },
     cancelToken: callCancel.token,
-    baseURL: 'http://motekso.co.uk/api'
+    baseURL: 'https://motekso.co.uk/api'
   });
   
   axiosInstance.interceptors.response.use(handleSuccess, handleError);
