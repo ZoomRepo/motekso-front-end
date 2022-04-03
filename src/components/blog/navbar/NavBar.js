@@ -34,8 +34,8 @@ class NavBar extends Component {
                     ):
                     (<ul class="navBarLinks">
                          <li class="navBarLink"><Link class="link" to="/login">Login</Link></li>
-                         <li class="navBarLink"><Link class="link" to="/registration">Register</Link></li>
                     </ul>)
+                    /* <li class="navBarLink"><Link class="link" to="/registration">Register</Link></li>*/
                 }
                    {/* TODO: Fix and Unhide Profile <i  class="topSearchIcon fas fa-search"></i> */}
                 </div>
