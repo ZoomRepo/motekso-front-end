@@ -14,6 +14,8 @@ const handleError = error => {
 const axiosInstance = () => {
   var token = localStorage.getItem("token");
   console.log(token);
+  var dynamicBaseURL = process.env.NODE_ENV=='development'?'http://localhost/api':'https://motekso.co.uk/api';
+
   // TODO: Fix CORS Issue
   const axiosInstance = Axios.create({
     headers: {
@@ -22,7 +24,7 @@ const axiosInstance = () => {
     Authorization: ""+token,
     },
     cancelToken: callCancel.token,
-    baseURL: 'https://motekso.co.uk/api'
+    baseURL: dynamicBaseURL
   });
   
   axiosInstance.interceptors.response.use(handleSuccess, handleError);

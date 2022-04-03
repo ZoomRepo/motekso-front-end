@@ -12,13 +12,7 @@ function App() {
       {/* TODO: automatically hide sidebar until hover over */}
       {/* <Sidebar/> */}
       <BlogPage/>
-      {/* <div class="twitter-feed">
-        <TwitterTimelineEmbed 
-            sourceType="profile"
-            screenName="MoteksoUK"/>
-      </div> */}
     </main>
- 
   );
 }
 
