@@ -44,7 +44,7 @@ export class Login extends Component {
           onChange={e => { this.changeEvent(e); }} required />
                     <button class="login-button" id="submit" onClick={() => this.login()} >Login</button>
                 </div>
-                <button class="register-button"><Link class="link" to="/registration">Register</Link></button>
+                {/* <button class="register-button"><Link class="link" to="/registration">Register</Link></button> */}
             </div>
         )
     }

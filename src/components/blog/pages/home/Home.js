@@ -12,7 +12,7 @@ export class Home extends Component {
             <Header />
             <div class="home">
                 <Posts/>
-                <Sidebar/>
+                {/* <Sidebar/> */}
             </div>
             {process.env.NODE_ENV=='development'?<Footer/>:""}
         </>
