@@ -1,4 +1,4 @@
-![React Logo](https://github.com/vercel/vercel/blob/master/packages/frameworks/logos/react.svg)
+![Motekso Blog Logo](https://motekso.co.uk/static/media/Motekso%20-%20Blog%20Logo%202.d109d01ce0834fa900a8.png)
 <!-- Replace with Motekso logo -->
 # Motekso - Front End
 
