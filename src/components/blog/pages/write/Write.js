@@ -9,7 +9,7 @@ import parseJwt from '../../../../utils/parseJwt'
 function Write({Token}) {
   const [post, setPost] = useState({Post:{}});
 
-
+/*
   useEffect(() => {
     var username = parseJwt(Token)["username"];
     const pathname = window.location.pathname;
@@ -31,19 +31,19 @@ function Write({Token}) {
     }
     setPost({ Post });
   },[post]);
-
+*/
   function updatePostImage(image) {
     setPost({
       Post: { ...post, image: image },
     });
   };
-
+/*
   function changeEvent(e) {
     setPost({
       Post: { ...post, [e.target.name]: e.target.value },
     });
   };
-
+*/
   function validatePostContent() {
     if (post.title !== "" && post.description !== "") {
       upsertPost(post)
@@ -61,7 +61,7 @@ function Write({Token}) {
         <PostImage Post={post} />
         <div class="form-collection">
           <UploadPostImage updatePostImage={updatePostImage} />
-          <PostDetail changeEvent={changeEvent} Post={post} />
+          {/*<PostDetail changeEvent={changeEvent} Post={post} />*/}
           <button class="submit" onClick={() => validatePostContent()}>
             Publish
           </button>

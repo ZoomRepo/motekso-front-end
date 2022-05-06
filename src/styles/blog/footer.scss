@@ -1,0 +1,27 @@
+.footer {
+    font-family: "Fira Sans";
+    width: 100vw;
+    background: #151515;
+    height: 50px;
+    position: sticky;
+    display: flex;
+    bottom: 0;
+    z-index: 1;
+    small {
+        justify-content: center;
+        align-items: center;    
+        color: #dfdfdf;
+        margin-top: 15px;
+        margin-left: 15px;
+        b {
+            color:#fb7e14;
+        }
+    }
+    .bottomLeft,
+    .bottomRight {
+        flex: 3;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}

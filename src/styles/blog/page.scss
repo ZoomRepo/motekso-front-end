@@ -2,7 +2,7 @@
     width: 100vw;
     font-size: 22px;
     min-height: 100vh;
-    font-family: "Indie Flower";
+    font-family: 'fira sans'; //font-family: "Indie Flower";
     .write {
         padding-top: 50px;
         .story-image {
@@ -40,7 +40,7 @@
                 font-size: 30px;
                 padding: 20px;
                 width: 70vw;
-                font-family: "Indie Flower";
+                font-family: 'fira sans'; //font-family: "Indie Flower";
                 color: #151515;
                 background: #dfdfdf;
                 &:focus {

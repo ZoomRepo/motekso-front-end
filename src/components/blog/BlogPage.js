@@ -54,9 +54,9 @@ class BlogPage extends Component {
                         <Route path="/login">
                         { this.state.loggedIn ? <Home/> : <Login AuthenticateApplication={() => this.authenticateApplication()}/> }
                         </Route>
-                        <Route path="/registration">
+                        {/* <Route path="/registration">
                             { this.state.loggedIn ? <Home/> : <Registration/> }
-                        </Route>
+                        </Route> */}
                         <Route path="/settings">
                             { this.state.loggedIn ? <Settings/> : <Registration/> }
                         </Route>
