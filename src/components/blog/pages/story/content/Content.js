@@ -6,6 +6,7 @@ import {
 } from "../../../../../services/blogController/postController/postController";
 import { Link } from "react-router-dom";
 import PostImage from "./image/postImage";
+import { format } from 'timeago.js';
 
 export class PostContent extends Component {
   state = {
@@ -79,7 +80,7 @@ export class PostContent extends Component {
             </span>
             <span class="post-date">
               {this.state.Post.date
-                ? this.state.Post.date
+                ? format(this.state.Post.date)
                 : "Error loading Post Date..."}
             </span>
           </div>
@@ -96,7 +97,7 @@ export class PostContent extends Component {
                 autoFocus="true"
               />
             ) : (
-              <h1 class="post-title">{this.state.Post.title}</h1>
+              <h1 class="post-title">{this.state.Post.description? this.state.Post.description: "Error loading Post Description..."}</h1>
             )}
           </p>
         </div>
