@@ -141,6 +141,7 @@
             margin-top: 20px;
             flex: 9;
             .post-content-wrapper {
+                overflow: hidden;
                 .post-image {
                     width: 100%;
                     height: 400px;
@@ -151,10 +152,53 @@
                     text-align: center;
                     margin: 10px;
                     font-size: 28px;
+                    border: none;
+                    &.edit {
+                        background: #dfdfdf;
+                        width: 90%;
+                        &:focus {
+                            border: none;
+                            background: #dfdfdf;
+                            outline: none;
+                        };
+                    }
+                }
+                ::-webkit-inner-spin-button{
+                    border: none;
+                    background-color: #dfdfdf;
+                    width: 80%;
+                    height: 60%;
+                    &:focus {
+                        border: none;
+                    };
+                }
+                .post-story {
+                    text-align: center;
+                    margin: 10px;
+                    font-size: 28px;
+                    border: none;
+                    background: #dfdfdf;
+                    &.edit {
+                        width: 90vw;
+                        line-height: 1.4em;
+                        height: 100vh;
+                        color: #373330;
+                        line-height: 25px;
+                        font-size: 22px;
+                        &:focus {
+                            border: none;
+                            background: #dfdfdf;
+                            outline: none;
+                        };
+                    }
                 }
                 .post-edit {
                     float: right;
                     font-style: 16px;
+                    .saveButton {
+                        color: teal;
+                        cursor: pointer;
+                    }
                     .post-icon {
                         margin-left: 10px;
                         cursor: pointer;
@@ -173,6 +217,7 @@
                     font-size: 16px;
                     color: #fb7e14;
                 }
+                // Post Story - Font Settings
                 .post-description {
                     color: #373330;
                     line-height: 25px;

@@ -13,7 +13,7 @@ const handleError = error => {
 
 const axiosInstance = () => {
   var token = localStorage.getItem("token");
-  console.log(token);
+  //console.log(token);
   var dynamicBaseURL = process.env.NODE_ENV=='development'?'http://localhost/api':'https://motekso.co.uk/api';
 
   // TODO: Fix CORS Issue

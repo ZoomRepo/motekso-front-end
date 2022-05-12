@@ -3,6 +3,7 @@ import tempPostImage from "../../../../../assets/images/who-are-we.jpg";
 import {
   getPost,
   deletePost,
+  upsertPost,
 } from "../../../../../services/blogController/postController/postController";
 import { Link } from "react-router-dom";
 import PostImage from "./image/postImage";
@@ -10,7 +11,7 @@ import { format } from 'timeago.js';
 
 export class PostContent extends Component {
   state = {
-    Post: {},
+    Post: {baboon:""},
     Edit: false,
   };
 
@@ -18,9 +19,28 @@ export class PostContent extends Component {
     getPost(this.props.Id).then((res) => this.setState({ Post: res }));
   }
 
-  callDeletePost(id) {
+  callDeletePost() {
     deletePost(this.props.Id).then((res) => this.setState({ Post: res }));
+    window.location.reload(false);
   }
+  changeEvent(e) {
+    this.setState({
+      Post: { ...this.state.Post, [e.target.name]: e.target.value },
+    });
+  };
+
+ validatePostContent() {
+    if (this.state.Post.title !== "" && this.state.Post.description !== "") {
+      upsertPost(this.state.Post)
+        .then((res) => console.log(res))
+        .catch((err) => console.log(err));
+        window.location.reload(false);
+    } else {
+      alert(
+        "Please write a story for me to Post... Stories don't write themselves..."
+      );
+    }
+  };
 
   updateMode() {
     if (this.state.Edit) {
@@ -37,16 +57,23 @@ export class PostContent extends Component {
         <div class="post-content-wrapper">
           <PostImage Post={this.state.Post} />
           {this.state.Edit ? (
-            <input
-              class="title-text"
-              name="title"
-              type="text"
-              value={this.state.Post.title}
-              onChange={(e) => {
-                changeEvent(e);
-              }}
-              autoFocus="true"
-            />
+            <> <input
+            class="post-title edit"
+            name="title"
+            type="text"
+            value={this.state.Post.title}
+            onChange={(e) => {
+              this.changeEvent(e);
+            }}
+          />
+          <div class="post-edit">
+              <i
+                class="saveButton fa-solid fa-check"
+                onClick={() => {
+                  this.validatePostContent();
+                }}
+              />
+            </div></>
           ) : (
             <h1 class="post-title">
               {this.state.Post.title
@@ -62,7 +89,7 @@ export class PostContent extends Component {
                   />
                   <i
                     onClick={() => {
-                      this.callDeletePost(this.state.Post.id);
+                      this.callDeletePost();
                     }}
                     class="post-icon far fa-trash-alt"
                   />
@@ -84,22 +111,23 @@ export class PostContent extends Component {
                 : "Error loading Post Date..."}
             </span>
           </div>
-          <p class="post-description">
             {this.state.Edit ? (
-              <input
-                class="title-text"
-                name="title"
+              <textarea
+                class="post-story edit"
+                name="description"
                 type="text"
                 value={this.state.Post.description}
                 onChange={(e) => {
-                  changeEvent(e);
+                  this.changeEvent(e);
                 }}
-                autoFocus="true"
-              />
+             ></textarea> 
             ) : (
-              <h1 class="post-title">{this.state.Post.description? this.state.Post.description: "Error loading Post Description..."}</h1>
+              <textarea disabled
+              class="post-story edit"
+              value={this.state.Post.description}
+              name="description"
+              type="text"></textarea> 
             )}
-          </p>
         </div>
       </div>
     );
