@@ -11,7 +11,7 @@ function PostImage({ Post }) {
 
   React.useEffect(() => {
     if (Post.image) {
-      console.log(Post)
+      //console.log(Post)
       getFile(Post.image).then((res) =>
       // console.log(res)
         setImage(`data:image/jpeg;base64,${res.data}`)

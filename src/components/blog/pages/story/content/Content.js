@@ -3,6 +3,7 @@ import tempPostImage from "../../../../../assets/images/who-are-we.jpg";
 import {
   getPost,
   deletePost,
+  upsertPost,
 } from "../../../../../services/blogController/postController/postController";
 import { Link } from "react-router-dom";
 import PostImage from "./image/postImage";
@@ -10,7 +11,7 @@ import { format } from 'timeago.js';
 
 export class PostContent extends Component {
   state = {
-    Post: {},
+    Post: {baboon:""},
     Edit: false,
   };
 
@@ -18,14 +19,29 @@ export class PostContent extends Component {
     getPost(this.props.Id).then((res) => this.setState({ Post: res }));
   }
 
-  callDeletePost(id) {
+  callDeletePost() {
     deletePost(this.props.Id).then((res) => this.setState({ Post: res }));
+    window.location.reload(false);
   }
   changeEvent(e) {
     this.setState({
       Post: { ...this.state.Post, [e.target.name]: e.target.value },
     });
   };
+
+ validatePostContent() {
+    if (this.state.Post.title !== "" && this.state.Post.description !== "") {
+      upsertPost(this.state.Post)
+        .then((res) => console.log(res))
+        .catch((err) => console.log(err));
+        window.location.reload(false);
+    } else {
+      alert(
+        "Please write a story for me to Post... Stories don't write themselves..."
+      );
+    }
+  };
+
   updateMode() {
     if (this.state.Edit) {
       this.setState({ Edit: false });
@@ -53,9 +69,9 @@ export class PostContent extends Component {
           <div class="post-edit">
               <i
                 class="saveButton fa-solid fa-check"
-                //onClick={() => {
-                //  this.updateMode();
-                //}}
+                onClick={() => {
+                  this.validatePostContent();
+                }}
               />
             </div></>
           ) : (
@@ -73,7 +89,7 @@ export class PostContent extends Component {
                   />
                   <i
                     onClick={() => {
-                      this.callDeletePost(this.state.Post.id);
+                      this.callDeletePost();
                     }}
                     class="post-icon far fa-trash-alt"
                   />
