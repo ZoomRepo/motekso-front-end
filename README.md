@@ -10,12 +10,7 @@ The Dockerfile is built into and image when the main branch is push, this is dep
 <!-- 
 [![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/vercel/vercel/tree/main/examples/create-react-app-functions&template=create-react-app) -->
 
-_Live Example: https://create-react-app.now-examples.now.sh/_
+_Live Example: https://motekso.co.uk
 
-### Docker-Compose
-To get started with React, along with 
-<!-- [Serverless Functions](https://vercel.com/docs/v2/serverless-functions/introduction), with Vercel, you can use the [Create-React-App CLI](https://reactjs.org/docs/create-a-new-react-app.html#create-react-app) to initialize the project:
-
-```shell
-$ npx create-react-app my-app
-``` -->
+### Notice
+There will be more infromation regarding how you can get involved in the project here soon.
