@@ -21,7 +21,11 @@ export class PostContent extends Component {
   callDeletePost(id) {
     deletePost(this.props.Id).then((res) => this.setState({ Post: res }));
   }
-
+  changeEvent(e) {
+    this.setState({
+      Post: { ...this.state.Post, [e.target.name]: e.target.value },
+    });
+  };
   updateMode() {
     if (this.state.Edit) {
       this.setState({ Edit: false });
@@ -37,16 +41,23 @@ export class PostContent extends Component {
         <div class="post-content-wrapper">
           <PostImage Post={this.state.Post} />
           {this.state.Edit ? (
-            <input
-              class="title-text"
-              name="title"
-              type="text"
-              value={this.state.Post.title}
-              onChange={(e) => {
-                changeEvent(e);
-              }}
-              autoFocus="true"
-            />
+            <> <input
+            class="post-title edit"
+            name="title"
+            type="text"
+            value={this.state.Post.title}
+            onChange={(e) => {
+              this.changeEvent(e);
+            }}
+          />
+          <div class="post-edit">
+              <i
+                class="saveButton fa-solid fa-check"
+                //onClick={() => {
+                //  this.updateMode();
+                //}}
+              />
+            </div></>
           ) : (
             <h1 class="post-title">
               {this.state.Post.title
@@ -84,22 +95,23 @@ export class PostContent extends Component {
                 : "Error loading Post Date..."}
             </span>
           </div>
-          <p class="post-description">
             {this.state.Edit ? (
-              <input
-                class="title-text"
-                name="title"
+              <textarea
+                class="post-story edit"
+                name="description"
                 type="text"
                 value={this.state.Post.description}
                 onChange={(e) => {
-                  changeEvent(e);
+                  this.changeEvent(e);
                 }}
-                autoFocus="true"
-              />
+             ></textarea> 
             ) : (
-              <h1 class="post-title">{this.state.Post.description? this.state.Post.description: "Error loading Post Description..."}</h1>
+              <textarea disabled
+              class="post-story edit"
+              value={this.state.Post.description}
+              name="description"
+              type="text"></textarea> 
             )}
-          </p>
         </div>
       </div>
     );
