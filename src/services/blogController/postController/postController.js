@@ -1,13 +1,13 @@
 import { AxiosPost, AxiosGet, AxiosDelete } from "../../AxiosWrapper";
 
 export const upsertPost = (post) => {
-  
   const postData = {
+    _id: post._id,
     title: post.title,
     description: post.description, 
     author: post.author, 
     image: post.image,
-    date: post.date
+    date: post.date,
   }
   return AxiosPost(`/post`, postData);
 };
