@@ -61,7 +61,7 @@ function Write({Token}) {
         <PostImage Post={post} />
         <div class="form-collection">
           <UploadPostImage updatePostImage={updatePostImage} />
-          {/*<PostDetail changeEvent={changeEvent} Post={post} />*/}
+          <PostDetail changeEvent={changeEvent} Post={post} />
           <button class="submit" onClick={() => validatePostContent()}>
             Publish
           </button>
