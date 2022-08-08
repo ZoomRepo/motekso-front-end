@@ -88,11 +88,29 @@ body {
   .masthead-brand {
     float: left;
   }
+
   .nav-masthead {
     float: right;
   }
 }
-
+/* iPhone XR */
+@media (min-width: 414px) {
+  html,
+  body {
+    height: 100%;
+    background: #666 url("../../assets/images/e5c5ab2eba372858336d3f75d8ff-1434233.jpg") no-repeat fixed center;
+    background-size: 160vw 75vh;
+  }
+}
+/* iPhone SE & Samsung S8 */
+@media (min-width: 359px) {
+  html,
+  body {
+    height: 100%;
+    background: #666 url("../../assets/images/e5c5ab2eba372858336d3f75d8ff-1434233.jpg") no-repeat fixed center;
+    background-size: 160vw 65vh;
+  }
+}
 
 /*
  * Cover
