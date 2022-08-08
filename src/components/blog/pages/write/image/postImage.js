@@ -7,23 +7,23 @@ import {
 } from "../../../../../services/blogController/fileController/FileController";
 
 function PostImage({ Post }) {
-  const [image, setImage] = useState();
+  // const [image, setImage] = useState();
 
-  React.useEffect(() => {
-    if (Post.image) {
-      //console.log(Post)
-      getFile(Post.image).then((res) =>
-        setImage(`data:image/jpeg;base64,${res.data}`)
-      );
-    }
-  }, [Post]);
+  // React.useEffect(() => {
+  //   if (Post.image) {
+  //     //console.log(Post)
+  //     getFile(Post.image).then((res) =>
+  //       setImage(`data:image/jpeg;base64,${res.data}`)
+  //     );
+  //   }
+  // }, [Post]);
 
   return (
     <div>
       {Post.image ? (
-        <img src={image} class="story-image" />
+        <img src={image} class="post-image" />
       ) : (
-         <img class="story-image" src={tempImage} alt="Post Image"/>
+         <img class="post-image" src={tempImage} alt="Post Image"/>
       )}
     </div>
   );
