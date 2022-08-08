@@ -9,7 +9,8 @@ a:hover {
   color: #fff;
 }
 .logo {
-  width:60px;
+  margin-top: -10px;
+  width:180px;
 }
 /* Custom default button */
 .btn-secondary,

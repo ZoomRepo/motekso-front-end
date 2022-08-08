@@ -7,7 +7,7 @@ function App() {
 <div class="cover-container d-flex h-100 p-3 mx-auto flex-column">
       <header class="masthead mb-auto">
         <div class="inner">
-          <img  class="masthead-brand logo" src={require('../assets/images/simple-transparent.png')} />
+          <img  class="masthead-brand logo" src={require('../assets/images/Motekso - flat- transparent.png')} />
           <nav class="nav nav-masthead justify-content-center">
             <a class="nav-link active" href="#">Home</a>
             <a class="nav-link" href="https://medium.com/@ollie_beumkes">Blog</a>
