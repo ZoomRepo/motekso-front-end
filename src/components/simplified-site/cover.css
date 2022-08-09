@@ -31,7 +31,6 @@ html,
 body {
   height: 100%;
   background: #666 url("../../assets/images/e5c5ab2eba372858336d3f75d8ff-1434233.jpg") no-repeat fixed center;
-  background-size: 90vw 80vh;
 }
 
 body {
@@ -88,7 +87,6 @@ body {
   .masthead-brand {
     float: left;
   }
-
   .nav-masthead {
     float: right;
   }
@@ -99,7 +97,10 @@ body {
   body {
     height: 100%;
     background: #666 url("../../assets/images/e5c5ab2eba372858336d3f75d8ff-1434233.jpg") no-repeat fixed center;
-    background-size: 100vw 75vh;
+    background-size: 80vw 75vh;
+  }
+  .cover-container {
+    max-width: 35em;
   }
 }
 /* iPhone SE & Samsung S8 */
@@ -108,7 +109,10 @@ body {
   body {
     height: 100%;
     background: #666 url("../../assets/images/e5c5ab2eba372858336d3f75d8ff-1434233.jpg") no-repeat fixed center;
-    background-size: 100vw 65vh;
+    background-size: 80vw 65vh;
+  }
+  .cover-container {
+    max-width: 30em;
   }
 }
 
