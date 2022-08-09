@@ -82,8 +82,7 @@ body {
   color: #fff;
   border-bottom-color: #fff;
 }
-
-@media (min-width: 48em) {
+@media (min-height: 675px) {
   .masthead-brand {
     float: left;
   }
@@ -91,11 +90,53 @@ body {
   body {
     height: 100%;
     background: #666 url("../../assets/images/e5c5ab2eba372858336d3f75d8ff-1434233.jpg") no-repeat fixed center;
-    background-size: 90vw 85vh;
+    background-size: 90vw 80vh;
   }
   .nav-masthead {
     float: right;
   }
+} 
+@media (min-width: 48em) and (max-height: 675px) {
+  .masthead-brand {
+    float: left;
+  }
+  html,
+  body {
+    height: 100%;
+    background: #666 url("../../assets/images/e5c5ab2eba372858336d3f75d8ff-1434233.jpg") no-repeat fixed center;
+    background-size: 90vw 80vh;
+  }
+  .nav-masthead {
+    float: right;
+  }
+} /* 
+@media (min-height: 400px) and (max-width: 675px) {
+  .masthead-brand {
+    float: left;
+  }
+  html,
+  body {
+    height: 800%;
+    background: #666 url("../../assets/images/e5c5ab2eba372858336d3f75d8ff-1434233.jpg") no-repeat fixed center;
+    background-size: 80vw 65vh;
+  }
+  .nav-masthead {
+    float: right;
+  } 
+} */
+@media (min-height: 760px) and (max-width: 675px) {
+  .masthead-brand {
+    float: left;
+  }
+  html,
+  body {
+    height: 800%;
+    background: #666 url("../../assets/images/e5c5ab2eba372858336d3f75d8ff-1434233.jpg") no-repeat fixed center;
+    background-size: 80vw 65vh;
+  }
+  .nav-masthead {
+    float: right;
+  } 
 }
 /* iPhone XR */
 @media (min-width: 590px) and (max-width: 1000px) {
