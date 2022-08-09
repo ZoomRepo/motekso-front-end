@@ -87,24 +87,30 @@ body {
   .masthead-brand {
     float: left;
   }
+  html,
+  body {
+    height: 100%;
+    background: #666 url("../../assets/images/e5c5ab2eba372858336d3f75d8ff-1434233.jpg") no-repeat fixed center;
+    background-size: 90vw 85vh;
+  }
   .nav-masthead {
     float: right;
   }
 }
 /* iPhone XR */
-@media (min-width: 414px) {
+@media (min-width: 590px) and (max-width: 1000px) {
   html,
   body {
     height: 100%;
     background: #666 url("../../assets/images/e5c5ab2eba372858336d3f75d8ff-1434233.jpg") no-repeat fixed center;
-    background-size: 80vw 75vh;
+    background-size: 80vw 65vh;
   }
   .cover-container {
-    max-width: 35em;
+    max-width:38em;
   }
 }
 /* iPhone SE & Samsung S8 */
-@media (min-width: 359px) {
+@media (min-width: 359px) and (max-width: 590px){
   html,
   body {
     height: 100%;
@@ -113,6 +119,19 @@ body {
   }
   .cover-container {
     max-width: 30em;
+  }
+}
+/* Too Small */ 
+@media (max-width: 300px){
+  html { visibility: hidden;
+  }
+  body {
+    visibility: hidden;
+  }
+  .cover-container {
+    max-width: 30em;
+    visibility: hidden;
+
   }
 }
 

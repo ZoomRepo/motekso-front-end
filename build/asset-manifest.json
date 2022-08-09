@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/static/css/main.c446a42e.css",
+    "main.css": "/static/css/main.9591b350.css",
     "main.js": "/static/js/main.d596d00f.js",
     "static/media/-1434233.jpg": "/static/media/e5c5ab2eba372858336d3f75d8ff-1434233.a29264251ca79b238011.jpg",
     "static/media/Motekso - flat- transparent.png": "/static/media/Motekso - flat- transparent.9a42aabfd880b181b873.png",
     "index.html": "/index.html",
-    "main.c446a42e.css.map": "/static/css/main.c446a42e.css.map",
+    "main.9591b350.css.map": "/static/css/main.9591b350.css.map",
     "main.d596d00f.js.map": "/static/js/main.d596d00f.js.map"
   },
   "entrypoints": [
-    "static/css/main.c446a42e.css",
+    "static/css/main.9591b350.css",
     "static/js/main.d596d00f.js"
   ]
 }
